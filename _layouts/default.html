@@ -34,15 +34,19 @@
 <body class="bg-image">
 
   {% if page.intro-banner %}
-  <div class="bg-image tall siema">
-    <div class="banner padded-2 bump-right transbox">
-      <h1>Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  <div class="bg-image-slide bg-slide-1">
+    <div class="padded-2 bump-right transbox">
+      <h1> 1. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
     </div>
-    <div class="banner padded-2 bump-right transbox">
-      <h1>Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  </div>
+  <div class="bg-image-slide bg-slide-2">
+    <div class="padded-2 bump-right transbox">
+      <h1>2. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
     </div>
-    <div class="banner padded-2 bump-right transbox">
-      <h1>Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  </div>
+  <div class="bg-image-slide bg-slide-3">
+    <div class="padded-2 bump-right transbox">
+      <h1>3. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
     </div>
   </div>
   {% endif %}
@@ -54,13 +58,48 @@
       <!-- - - - - - - - - - - NAVIGATION BAR - - - - - - - - - -  -->
       <div class="sidebar mob-hide">
         <nav>
+          {% if page.language== "esp"%}
           <li><a href="/#rooms">Habitaciones</a></li>
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
           <li><a href="/#contact" class="light">Contacto</a></li>
           <li><a href="/#press" class="light">Prensa</a></li>
           <li><a href="/#news" class="light">News</a></li>
-          <li><a href="/#">ENG</a></li>
+
+            {% elsif page.language== "eng"%}
+            <li><a href="/#rooms">Rooms</a></li>
+            <li><a href="/#info">Info</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#contact" class="light">Contact</a></li>
+            <li><a href="/#press" class="light">Press</a></li>
+            <li><a href="/#news" class="light">News</a></li>
+
+            {% elsif page.language== "fre" %}
+            <li><a href="/#rooms">Pièces</a></li>
+            <li><a href="/#info">Info</a></li>
+            <li><a href="/#gallery">Galerie</a></li>
+            <li><a href="/#contact" class="light">Contacto</a></li>
+            <li><a href="/#press" class="light">Presse</a></li>
+            <li><a href="/#news" class="light">Nouvelles</a></li>
+            {% endif %}
+            <li>
+
+            <div id="google_translate_element"></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  {% if page.name contains "index" %}
+    <a href="{{ site.baseurl }}/">ESP</a>
+    <a href="{{ site.baseurl | append: "/en" }}">EN</a>
+    <a href="{{ site.baseurl | append: "/fre" }}">FRE</a>
+  {% else %}
+    <a href="{{ site.baseurl | append: page.handle }}">ESP</a>
+    <a href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
+    <a href="{{ site.baseurl | append: "/fre" | append: page.handle }}">FRE</a>
+  {% endif %}
+          </li>
         </nav>
       </div>
 
@@ -73,13 +112,42 @@
         </div>
         <div class="burger-menu">
           <ul>
+            {% if page.language== "esp" %}
             <li><a href="/#rooms">Habitaciones</a></li>
             <li><a href="/#info">Info</a></li>
             <li><a href="/#gallery">Galería</a></li>
             <li><a href="/#contact" class="light">Contacto</a></li>
             <li><a href="/#press" class="light">Prensa</a></li>
             <li><a href="/#news" class="light">News</a></li>
-            <li><a href="/#">ENG</a></li>
+
+              {% elsif page.language== "eng" %}
+              <li><a href="/#rooms">Rooms</a></li>
+              <li><a href="/#info">Info</a></li>
+              <li><a href="/#gallery">Gallery</a></li>
+              <li><a href="/#contact" class="light">Contact</a></li>
+              <li><a href="/#press" class="light">Press</a></li>
+              <li><a href="/#news" class="light">News</a></li>
+
+              {% elsif page.language== "fre" %}
+              <li><a href="/#rooms">Pièces</a></li>
+              <li><a href="/#info">Info</a></li>
+              <li><a href="/#gallery">Galerie</a></li>
+              <li><a href="/#contact" class="light">Contacto</a></li>
+              <li><a href="/#press" class="light">Presse</a></li>
+              <li><a href="/#news" class="light">Nouvelles</a></li>
+              {% endif %}
+              <li>
+
+    {% if page.name contains "index" %}
+      <a href="{{ site.baseurl }}/">ESP</a>
+      <a href="{{ site.baseurl | append: "/en" }}">EN</a>
+      <a href="{{ site.baseurl | append: "/fre" }}">FRE</a>
+    {% else %}
+      <a href="{{ site.baseurl | append: page.handle }}">ESP</a>
+      <a href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
+      <a href="{{ site.baseurl | append: "/fre" | append: page.handle }}">FRE</a>
+    {% endif %}
+            </li>
             <ul>
         </div>
       </nav>
@@ -97,6 +165,7 @@
       <div class="body-content">
       <footer class="align-center bg-beige">
         <div class="top-arrow"><a href="#top"><img src="/images/up-arrow.svg" alt="up arrow"></a></div>
+        {% if page.language== "esp" %}
         <nav>
           <li><a href="/#">Contacto</a></li>
           <li><a href="/#">Privacidad</a></li>
@@ -104,6 +173,25 @@
           <li><a href="/#">Instagram</a></li>
           <li><a href="/#" class="mob-hide">Reserva</a></li>
         </nav>
+        {% elsif page.language== "eng" %}
+
+        <nav>
+          <li><a href="/#">Contact</a></li>
+          <li><a href="/#">Privacy</a></li>
+          <li><a href="/#">Facebook</a></li>
+          <li><a href="/#">Instagram</a></li>
+          <li><a href="/#" class="mob-hide">Reserve</a></li>
+        </nav>
+        {% elsif page.language== "fre" %}
+        <nav>
+          <li><a href="/#">Contact</a></li>
+          <li><a href="/#">Intimité</a></li>
+          <li><a href="/#">Facebook</a></li>
+          <li><a href="/#">Instagram</a></li>
+          <li><a href="/#" class="mob-hide">Réserve</a></li>
+        </nav>
+        {% endif %}
+
         <div class="copyright">
           <p>Copyright © 2018 Casa Mathilda | <a href="http://loveiscreative.com">Site Credits</a></p>
         </div>
@@ -116,7 +204,7 @@
 
     <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='a8225edfb0f738452391a057432b6467927bf228fc706c792f4c668ccb450ab5';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
 
-    <script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>
+    <script src="/js/siema.js"></script>
       <script>
        new Siema({
          duration: 2000,
@@ -129,6 +217,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
     <script src="/js/main.js"></script>
+
+    <style>
+    .myslides {display:none;}
+    </style>
+    <script>
+
+    // This is the automatic background slider on the homepage
+
+      var slideIndex = 0;
+      carousel();
+
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("bg-image-slide");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {slideIndex = 1}
+          x[slideIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    // end background slides
+
+    </script>
+
 
     </body>
     </html>

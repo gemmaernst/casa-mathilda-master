@@ -173,21 +173,34 @@ footer {
 
 
 /* Slider styles */
-.slider {
-  width: 300px;
-  height: 500px;
-  overflow-x: scroll;
-}
-.slide {
-  float: left;
-  width: 300px;
-  height: 500px;
+
+.bg-image-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/images/casa-mathilda-banner.jpg);
+  background-attachment: fixed;
+  min-height:100vh;
+  display:none;
   position: relative;
-  background-position: -100px 0;
 }
-.holder {
-  width: 300%;
+
+.bg-image-slide .transbox {
+    position: absolute;
+    bottom: 30vh;
+    right: 50px;
+    max-width: 900px;
 }
+
+.bg-slide-1 {
+  background-image: url(/images/casa-mathilda-banner.jpg);
+}
+.bg-slide-2 {
+  background-image: url(/images/room-mathilda.jpg);
+}
+.bg-slide-3 {
+  background-image: url(/images/casa-mathilda-banner.jpg);
+}
+
 
 /* Popup Room Details */
 

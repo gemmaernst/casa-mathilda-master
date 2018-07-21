@@ -28,64 +28,35 @@ $(document).ready(function(){
 
     });
 
+    /* filtering */
+
+    $('nav#rooms-filter a').click(function(e) {
+      e.preventDefault();
+      console.log("We clicked it");
+
+      /* make this <li> class active and remove class 'active' from any other <li>s */
+      $('nav#rooms-filter .active').removeClass('active');
+      $(this).addClass('active');
+
+      /* get the name of the cateory from this link */
+      var filterVal = $(this).text().toLowerCase().replace(' ','-').replace(' ','-');
+
+      $('#rooms-grid .filterable-item').each(function() {
+          if(filterVal == 'all'){
+            $(this).removeClass('hidden');
+          }else{
+            if(!$(this).hasClass(filterVal)) {
+              $(this).addClass('hidden'); // hide those that don't have the filter
+            }else{
+              $(this).removeClass('hidden'); // show those that do have the filter
+            }
+      };
+      });
+
+      });
+
     // end filterable gallery
 
-    // slider
-    var slider = {
-
-      // Not sure if keeping element collections like this
-      // together is useful or not.
-      el: {
-        slider: $("#slider"),
-        allSlides: $(".slide"),
-      },
-
-      timing: 800,
-      slideWidth: 300, // could measure this
-
-      // In this simple example, might just move the
-      // binding here to the init function
-      init: function() {
-        this.bindUIEvents();
-      },
-
-      bindUIEvents: function() {
-        // You can either manually scroll...
-        this.el.slider.on("scroll", function(event) {
-          slider.moveSlidePosition(event);
-        });
-
-      },
-
-      moveSlidePosition: function(event) {
-        // Magic Numbers =(
-        this.el.allSlides.css({
-          "background-position": $(event.target).scrollLeft()/6-100+ "px 0"
-        });
-      },
-
-      handleNavClick: function(event, el) {
-        event.preventDefault();
-        var position = $(el).attr("href").split("-").pop();
-
-        this.el.slider.animate({
-          scrollLeft: position * this.slideWidth
-        }, this.timing);
-
-        this.changeActiveNav(el);
-      },
-
-      changeActiveNav: function(el) {
-        this.el.allNavButtons.removeClass("active");
-        $(el).addClass("active");
-      }
-
-    };
-
-    slider.init();
-
-    // https://codepen.io/BaylorRae/pen/ImGBC
-    // Originally added click links, so I ported over and re-wrote
 
 });
 
