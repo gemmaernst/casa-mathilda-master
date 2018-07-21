@@ -1,0 +1,49 @@
+---
+title: Press | Casa Mathilda
+layout: default
+media:
+  - title: Elle Magazine
+    featured_image: /images/press-cover.jpg
+    url: http://www.google.com
+  - title: New York Times
+    featured_image: /images/press-cover.jpg
+    url: http://www.google.com
+  - title: Article about sports
+    featured_image: /images/press-cover.jpg
+    url: http://www.google.com
+---
+<!-- - - - - - - - - - - HEADER - - - - - - - - - -  -->
+<div class="body-content">
+<section class="bg-beige margin-top press">
+  <div>
+    <div class="padded-top">
+      <h1>Prensa</h1>
+      <p class="narrow-width bump-right p-bold">All rooms bla lorem ipsum dolor sit amet, consectetur adipiscing elit.  Phasellus varius sit amet hello mi viverra hendrerit. Lorem ipsum dolor sit amet, consectetur.</p>
+    </div>
+  </div>
+
+
+<!-- - - - - - - - - - - MAIN - - - - - - - - - -  -->
+  <div class="bg-beige grid-spaceBetween">
+
+    {% for press in page.media %}
+
+    <div class="col-4_sm-6_xs-12 padded-5">
+      <img src="{{press.featured_image}}" alt="{{press.title}}">
+      <div class="align-center button-2"><a href="{{press.url}}" target="_blank">Ver</a></div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+
+
+<!-- - - - - - - - - - - Bottom Button - - - - - - - - - -  -->
+  <div class="button-1 align-center">
+    <a href="#">Atrás</a>
+    <img src="/images/right-arrow.svg" alt="right arrow">
+  </div>
+
+</section>
+</div>
