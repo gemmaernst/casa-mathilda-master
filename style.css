@@ -80,10 +80,12 @@ footer {
 }
 
 .banner {
-  max-width: 70%;
+  padding-left: 30%;
+  min-width: 100vw !important;
+  /* max-width: 70%;
   margin-top: 60vh;
   right: 0;
-  position: absolute;
+  position: absolute; */
 }
 
 .narrow-width {
