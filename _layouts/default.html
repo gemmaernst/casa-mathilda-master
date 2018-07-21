@@ -58,7 +58,7 @@
       <!-- - - - - - - - - - - NAVIGATION BAR - - - - - - - - - -  -->
       <div class="sidebar mob-hide">
         <nav>
-          {% if page.language== "esp"%}
+
           <li><a href="/#rooms">Habitaciones</a></li>
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
@@ -66,39 +66,12 @@
           <li><a href="/#press" class="light">Prensa</a></li>
           <li><a href="/#news" class="light">News</a></li>
 
-            {% elsif page.language== "eng"%}
-            <li><a href="/#rooms">Rooms</a></li>
-            <li><a href="/#info">Info</a></li>
-            <li><a href="/#gallery">Gallery</a></li>
-            <li><a href="/#contact" class="light">Contact</a></li>
-            <li><a href="/#press" class="light">Press</a></li>
-            <li><a href="/#news" class="light">News</a></li>
-
-            {% elsif page.language== "fre" %}
-            <li><a href="/#rooms">Pièces</a></li>
-            <li><a href="/#info">Info</a></li>
-            <li><a href="/#gallery">Galerie</a></li>
-            <li><a href="/#contact" class="light">Contacto</a></li>
-            <li><a href="/#press" class="light">Presse</a></li>
-            <li><a href="/#news" class="light">Nouvelles</a></li>
-            {% endif %}
             <li>
-
-            <div id="google_translate_element"></div><script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-            }
-            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  {% if page.name contains "index" %}
-    <a href="{{ site.baseurl }}/">ESP</a>
-    <a href="{{ site.baseurl | append: "/en" }}">EN</a>
-    <a href="{{ site.baseurl | append: "/fre" }}">FRE</a>
-  {% else %}
-    <a href="{{ site.baseurl | append: page.handle }}">ESP</a>
-    <a href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
-    <a href="{{ site.baseurl | append: "/fre" | append: page.handle }}">FRE</a>
-  {% endif %}
+              <li>
+                <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
+                <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
+                <a href="#googtrans(es|fr)" class="lang-fr lang-select" data-lang="fr">FRE</a>
+            </li>
           </li>
         </nav>
       </div>
@@ -112,41 +85,17 @@
         </div>
         <div class="burger-menu">
           <ul>
-            {% if page.language== "esp" %}
+
             <li><a href="/#rooms">Habitaciones</a></li>
             <li><a href="/#info">Info</a></li>
             <li><a href="/#gallery">Galería</a></li>
             <li><a href="/#contact" class="light">Contacto</a></li>
             <li><a href="/#press" class="light">Prensa</a></li>
             <li><a href="/#news" class="light">News</a></li>
-
-              {% elsif page.language== "eng" %}
-              <li><a href="/#rooms">Rooms</a></li>
-              <li><a href="/#info">Info</a></li>
-              <li><a href="/#gallery">Gallery</a></li>
-              <li><a href="/#contact" class="light">Contact</a></li>
-              <li><a href="/#press" class="light">Press</a></li>
-              <li><a href="/#news" class="light">News</a></li>
-
-              {% elsif page.language== "fre" %}
-              <li><a href="/#rooms">Pièces</a></li>
-              <li><a href="/#info">Info</a></li>
-              <li><a href="/#gallery">Galerie</a></li>
-              <li><a href="/#contact" class="light">Contacto</a></li>
-              <li><a href="/#press" class="light">Presse</a></li>
-              <li><a href="/#news" class="light">Nouvelles</a></li>
-              {% endif %}
               <li>
-
-    {% if page.name contains "index" %}
-      <a href="{{ site.baseurl }}/">ESP</a>
-      <a href="{{ site.baseurl | append: "/en" }}">EN</a>
-      <a href="{{ site.baseurl | append: "/fre" }}">FRE</a>
-    {% else %}
-      <a href="{{ site.baseurl | append: page.handle }}">ESP</a>
-      <a href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
-      <a href="{{ site.baseurl | append: "/fre" | append: page.handle }}">FRE</a>
-    {% endif %}
+                <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
+                <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
+                <a href="#googtrans(es|fr)" class="lang-fr lang-select" data-lang="fr">FRE</a>
             </li>
             <ul>
         </div>
@@ -165,7 +114,6 @@
       <div class="body-content">
       <footer class="align-center bg-beige">
         <div class="top-arrow"><a href="#top"><img src="/images/up-arrow.svg" alt="up arrow"></a></div>
-        {% if page.language== "esp" %}
         <nav>
           <li><a href="/#">Contacto</a></li>
           <li><a href="/#">Privacidad</a></li>
@@ -173,24 +121,6 @@
           <li><a href="/#">Instagram</a></li>
           <li><a href="/#" class="mob-hide">Reserva</a></li>
         </nav>
-        {% elsif page.language== "eng" %}
-
-        <nav>
-          <li><a href="/#">Contact</a></li>
-          <li><a href="/#">Privacy</a></li>
-          <li><a href="/#">Facebook</a></li>
-          <li><a href="/#">Instagram</a></li>
-          <li><a href="/#" class="mob-hide">Reserve</a></li>
-        </nav>
-        {% elsif page.language== "fre" %}
-        <nav>
-          <li><a href="/#">Contact</a></li>
-          <li><a href="/#">Intimité</a></li>
-          <li><a href="/#">Facebook</a></li>
-          <li><a href="/#">Instagram</a></li>
-          <li><a href="/#" class="mob-hide">Réserve</a></li>
-        </nav>
-        {% endif %}
 
         <div class="copyright">
           <p>Copyright © 2018 Casa Mathilda | <a href="http://loveiscreative.com">Site Credits</a></p>
@@ -204,23 +134,45 @@
 
     <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='a8225edfb0f738452391a057432b6467927bf228fc706c792f4c668ccb450ab5';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
 
-    <script src="/js/siema.js"></script>
-      <script>
-       new Siema({
-         duration: 2000,
-         loop: true,
-         perPage: 1
-       });
-      </script>
     <!-- end sumome -->
 
+    <!-- magnific popup lightbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
-    <script src="/js/main.js"></script>
 
-    <style>
-    .myslides {display:none;}
-    </style>
+
+    <!-- this is the google translate widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+        }
+
+    	function triggerHtmlEvent(element, eventName) {
+    	  var event;
+    	  if (document.createEvent) {
+    		event = document.createEvent('HTMLEvents');
+    		event.initEvent(eventName, true, true);
+    		element.dispatchEvent(event);
+    	  } else {
+    		event = document.createEventObject();
+    		event.eventType = eventName;
+    		element.fireEvent('on' + event.eventType, event);
+    	  }
+    	}
+
+    	jQuery('.lang-select').click(function() {
+    	  var theLang = jQuery(this).attr('data-lang');
+    	  jQuery('.goog-te-combo').val(theLang);
+
+    	  //alert(jQuery(this).attr('href'));
+    	  window.location = jQuery(this).attr('href');
+    	  location.reload();
+
+    	});
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- end google translate -->
+
     <script>
 
     // This is the automatic background slider on the homepage
@@ -243,6 +195,7 @@
 
     </script>
 
+    <script src="/js/main.js"></script>
 
     </body>
     </html>

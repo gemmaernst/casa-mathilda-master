@@ -666,6 +666,10 @@ hr {
   padding-bottom: 0.5rem;
 }
 
+/* .goog-te-banner-frame.skiptranslate {
+    display: none!important;
+} */
+
 /*----------- RESPONSIVE DESIGN - MEDIA QUERIES -----------*/
 
 @media(max-width:768px) {
