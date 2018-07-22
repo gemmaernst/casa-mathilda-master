@@ -121,6 +121,7 @@ footer {
   background-repeat: no-repeat;
   background-image: url(images/room-mathilda.jpg);
   min-height: 80vh;
+  position: relative;
 }
 
 .logo {
@@ -209,12 +210,16 @@ footer {
 /* Popup Room Details */
 
 .room-details-popup {
-  position: relative;
-  background: #FFF;
-  padding: 20px;
+  position: absolute;
+  right: 0;
+  background: rgba(255,255,255,0.9);
+  padding: 4%;
   width: auto;
-  max-width: 90%;
-  margin: 5% auto;
+  width: 70%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  display:none;
 }
 
 .room-details-popup:focus {
@@ -224,6 +229,21 @@ footer {
 .small-image {
     display: inline-block;
     width: 32%;
+}
+
+
+.room-details-popup li {
+  padding-left: 3rem;
+  list-style-position: inside;
+  padding-bottom: 0.5rem;
+}
+
+.close-icon {
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
 /* Launch popup */
@@ -467,7 +487,8 @@ footer nav a:hover, .copyright a:hover {
   display: block;
 }
 
-.button-1 img {
+.button-1 img,
+.button-left img {
   width: 0.9em;
   margin-left: 1em;
 }
@@ -523,6 +544,23 @@ footer nav a:hover, .copyright a:hover {
   margin: 2% 3% 3% 2%;
   z-index: 100;
   transition: 0.2s ease;
+}
+
+.button-left{
+  background-color: #CECBC2;
+  line-height: 1em;
+  transition: 0.2s ease;
+  width: 215px;
+}
+
+.button-left a {
+  text-transform: uppercase;
+  padding: .8em 2em .8em;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  display: block;
 }
 
 /*----------- Form -----------*/

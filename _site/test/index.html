@@ -47,6 +47,8 @@
           <li><a href="/#contact" class="light">Contacto</a></li>
 
           
+          <li><a href="/press" class="light">Prensa</a></li>
+          
 
 
           <li><a href="/news" class="light">News</a></li>
@@ -61,6 +63,16 @@
         </nav>
 
         <div class="dropdown">
+
+          
+
+          <button class="dropbtn">
+            ESP <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+          </button>
+          <div class="dropdown-content">
+            <a href="/en/" data-lang="en">ENG</a>
+            <a href="/fr/" data-lang="fr">FRE</a>
+          </div>
 
           
 
@@ -85,6 +97,8 @@
             <li><a href="/#contact" class="light">Contacto</a></li>
 
             
+            <li><a href="/press" class="light">Prensa</a></li
+            
 
             <li><a href="/news" class="light">News</a></li>
               <li>
@@ -99,6 +113,8 @@
       <!-- - - - - - - - - - - BOOK BUTTON - - - - - - - - - -  -->
       <a href="#">
         
+        <img src="/images/book-button.png" alt="book button" class="book-button">
+        
       </a>
 
       <!-- - - - - - - - - - - BANNER - - - - - - - - - -  -->
@@ -106,22 +122,112 @@
 
     </header>
 
-      <section>
-  <div class="mySlides"> Hello 1 </div>
-  <div class="mySlides"> Hello 2 </div>
-  <div class="mySlides"> Hello 3 </div>
-  <div class="mySlides"> Hello 4 </div>
+      <section class="bg-beige">
+  <div class="padded-8">
+    <h1>Habitaciones</h1>
+    <p class="narrow-width bump-right p-bold">Mathilda te ofrece 3 tipos de habitaciones según su ubicación dentro de la casa.</p>
+  </div>
+  <div class="padded-left padded-2 link-menu" id="rooms">
+    <p>Rooms Title 2</p>
+
+    
+    <nav id="rooms-filter">
+      <li><a href="#">Terraza</a> | </li>
+      <li><a href="#">Interiores</a> | </li>
+      <li><a href="#">A la Calle</a></li>
+    </nav>
+    
+
+  </div>
+  <!-- we need to create one of these for each of the room types -->
+  <div id="rooms-grid">
+  <div class="slider-rooms terraza filterable-item">
+    <div class="bg-image-room" style="background-image:url('/images/casa-mathilda-banner.jpg')"></div>
+    <div class="bg-image-room" style="background-image:url('/images/room-mathilda.jpg')"></div>
+    <div class="bg-image-room" style="background-image:url('/images/casa-mathilda-banner.jpg')"></div>
+
+    <button class="room-left-button" onclick="plusRoomGallery(-1)">&#10094;</button>
+    <button class="room-right-button" onclick="plusRoomGallery(+1)">&#10095;</button>
+  <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+
+    <div class="button-1 button-ochre align-center" id="show-1">
+      <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">
+            <!-- this changes the text within the anchor link based on the language -->
+            
+                Detalles
+            
+            <img src="/images/right-arrow.svg" alt="right arrow">
+      </a>
+    </div>
+
+    <div id="popup-room-details-1" class="room-details-popup">
+      <div class="grid">
+        <div class="col-7">
+              <h2> Room Title 2 </h2>
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. </p>
+              <div class="button-left button-ochre left">
+                  <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
+              </div>
+        </div>
+        <div class="col-5">
+          <ul> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> </ul>
+        </div>
+        <span class="close-icon" id="hide-1"> X </span>
+      </div>
+    </div>
+    <!-- end popup div -->
+  </div>
+
+  <!-- popup number 2 -->
+  <div class="slider-rooms hidden interiores filterable-item" style="background-image:url('/images/blog-photo.jpg')">
+    <div class="button-1 button-ochre align-center">
+
+      <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+      <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">
+            <!-- this changes the text within the anchor link based on the language -->
+            
+                Detalles
+            
+            <img src="/images/right-arrow.svg" alt="right arrow">
+      </a>
+
+      <div id="popup-room-details-2" class="mfp-hide room-details-popup">
+        <h2> Title </h2>
+        <p> This is a room details description </p>
+        <img src="/images/blog-photo.jpg" class="small-image">
+        <img src="/images/blog-photo.jpg" class="small-image">
+        <img src="/images/blog-photo.jpg" class="small-image">
+      </div>
+
+
+    </div>
+    <!-- end popup div -->
+  </div>
+  <div class="slider-rooms hidden a-la-calle filterable-item" style="background-image:url('/images/casa-mathilda-banner.jpg')">
+    <div class="button-1 button-ochre align-center">
+
+      <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+
+      <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">
+            <!-- this changes the text within the anchor link based on the language -->
+            
+                Detalles
+            
+            <img src="/images/right-arrow.svg" alt="right arrow">
+      </a>
+
+      <div id="popup-room-details-3" class="mfp-hide room-details-popup">
+        <h2>  </h2>
+        <p> This is a room details description </p>
+        <img src="/images/blog-photo.jpg" class="small-image">
+        <img src="/images/blog-photo.jpg" class="small-image">
+        <img src="/images/blog-photo.jpg" class="small-image">
+      </div>
+
+    </div>
+    <!-- end popup div -->
+  </div>
 </section>
-
-
-temp for later
-
-
-
-<a href="">ESP</a>
-<a href="/en">EN</a>
-<a href="/fre">FRE</a>
-
 
 
 

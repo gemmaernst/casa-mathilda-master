@@ -107,12 +107,12 @@ $('a[href*="#"]')
 
   // magnific popup
 
-  $(document).ready(function() {
-    $('.open-room-details-1, .open-room-details-2, .open-room-details-3').magnificPopup({
-      type:'inline',
-      midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    });
-  });
+  // $(document).ready(function() {
+  //   $('.open-room-details-1, .open-room-details-2, .open-room-details-3').magnificPopup({
+  //     type:'inline',
+  //     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  //   });
+  // });
 
 
   $(document).ready(function() {
@@ -134,3 +134,48 @@ $('a[href*="#"]')
       }
     });
   });
+
+// This creates a funtion for the rooms details sections where we can show a section by clicking on the show button and hide it with the hide button
+
+  $(document).ready(function(){
+    $("#hide-1").click(function(){
+        $("#popup-room-details-1").hide();
+    });
+    $("#show-1").click(function(){
+        $("#popup-room-details-1").show();
+    });
+    $("#hide-2").click(function(){
+        $("#popup-room-details-2").hide();
+    });
+    $("#show-2").click(function(){
+        $("#popup-room-details-2").show();
+    });
+    $("#hide-3").click(function(){
+        $("#popup-room-details-3").hide();
+    });
+    $("#show-3").click(function(){
+        $("#popup-room-details-3").show();
+    });
+});
+
+
+// this gives you left and right buttons to toggle through classes
+  $(document).ready(function(){
+    var slideIndex = 1;
+    showRoomGallery(slideIndex);
+
+    function plusRoomGallery(n) {
+        showRoomGallery(slideIndex += n);
+    }
+
+    function showRoomGallery(n) {
+        var i;
+        var x = document.getElementsByClassName("bg-image-room");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+});
