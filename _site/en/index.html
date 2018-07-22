@@ -122,118 +122,178 @@
 
     </header>
 
-      <div class="bg-image-slide bg-slide-1">
+      <!-- Intro Banner -->
+<div class="bg-image-slide bg-slide-1">
   <div class="padded-2 bump-right transbox">
-    <h1> A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+    <h1> Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
   </div>
 </div>
 <div class="bg-image-slide bg-slide-2">
   <div class="padded-2 bump-right transbox">
-    <h1>A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+    <h1>Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
   </div>
 </div>
 <div class="bg-image-slide bg-slide-3">
   <div class="padded-2 bump-right transbox">
-    <h1> A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+    <h1> Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
   </div>
 </div>
 
 
 
-  <!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
+<!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
   <section class="bg-beige">
     <div class="padded-8">
-      <h1>Habitaciones</h1>
-      <p class="narrow-width bump-right p-bold">Mathilda te ofrece 3 tipos de habitaciones según su ubicación dentro de la casa.</p>
+      <h1></h1>
+      <p class="narrow-width bump-right p-bold"></p>
     </div>
     <div class="padded-left padded-2 link-menu" id="rooms">
-      <p>Rooms Title 2</p>
+      <p></p>
 
       
       <nav id="rooms-filter">
-        <li><a href="#">Terrace</a> | </li>
-        <li><a href="#">Interiores</a> | </li>
-        <li><a href="#">A la Calle</a></li>
+        <li><a href="#" id="terraza">Terrace</a> | </li>
+        <li><a href="#" id="interiores">Interiores</a> | </li>
+        <li><a href="#" id="a-la-calle">A la Calle</a></li>
       </nav>
       
 
     </div>
     <!-- we need to create one of these for each of the room types -->
+    <!-- we need to create one of these for each of the room types -->
     <div id="rooms-grid">
-    <div class="slider-rooms hidden terraza filterable-item">
-      <div class="button-1 button-ochre align-center">
 
-        <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+    
 
-        <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">
+    <div class="slider-rooms filterable-item terraza ">
+      <div class="bg-image-room" style="background-image:url(/images/casa-mathilda-banner.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url(/images/room-mathilda.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url()"></div>
+
+      <button class="room-left-button" onclick="plusRoomGallery(-1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+      <button class="room-right-button" onclick="plusRoomGallery(+1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+    <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+
+      <div class="button-1 button-ochre align-center" id="show-1">
+        <a href="#popup-room-details-1" class="open-room-details-1">
               <!-- this changes the text within the anchor link based on the language -->
               
                   Details
               
               <img src="/images/right-arrow.svg" alt="right arrow">
         </a>
+      </div>
 
-
-        <div id="popup-room-details-1" class="mfp-hide room-details-popup">
-          <h2>  </h2>
-          
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
+      <div id="popup-room-details-1" class="room-details-popup">
+        <div class="grid">
+          <div class="col-7">
+                <h2> Habitaciones </h2>
+                <p> Mathilda te ofrece 3 tipos de habitaciones según su ubicación dentro de la casa.</p>
+                <div class="button-left button-ochre left">
+                    <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
+                </div>
+          </div>
+          <div class="col-5">
+            <ul> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> </ul>
+          </div>
+          <span class="close-icon" id="hide-1"> X </span>
         </div>
-
       </div>
       <!-- end popup div -->
     </div>
 
-    <!-- popup number 2 -->
-    <div class="slider-rooms hidden interiores filterable-item" style="background-image:url('/images/blog-photo.jpg')">
-      <div class="button-1 button-ochre align-center">
+    
 
-        <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
-        <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">
+    <div class="slider-rooms filterable-item interiores  hidden ">
+      <div class="bg-image-room" style="background-image:url(/images/room-mathilda.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url(/images/casa-mathilda-banner.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url()"></div>
+
+      <button class="room-left-button" onclick="plusRoomGallery(-1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+      <button class="room-right-button" onclick="plusRoomGallery(+1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+    <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+
+      <div class="button-1 button-ochre align-center" id="show-2">
+        <a href="#popup-room-details-2" class="open-room-details-2">
               <!-- this changes the text within the anchor link based on the language -->
               
                   Details
               
               <img src="/images/right-arrow.svg" alt="right arrow">
         </a>
+      </div>
 
-        <div id="popup-room-details-2" class="mfp-hide room-details-popup">
-          <h2> Title </h2>
-          
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
+      <div id="popup-room-details-2" class="room-details-popup">
+        <div class="grid">
+          <div class="col-7">
+                <h2> Interiores </h2>
+                <p> Mathilda te ofrece 3 tipos de habitaciones según su ubicación dentro de la casa.</p>
+                <div class="button-left button-ochre left">
+                    <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
+                </div>
+          </div>
+          <div class="col-5">
+            <ul> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> </ul>
+          </div>
+          <span class="close-icon" id="hide-2"> X </span>
         </div>
-
-
       </div>
       <!-- end popup div -->
     </div>
-    <div class="slider-rooms hidden a-la-calle filterable-item" style="background-image:url('/images/casa-mathilda-banner.jpg')">
-      <div class="button-1 button-ochre align-center">
 
-        <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+    
 
-        <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">
+    <div class="slider-rooms filterable-item a-la-calle  hidden ">
+      <div class="bg-image-room" style="background-image:url(/images/casa-mathilda-banner.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url(/images/room-mathilda.jpg)"></div>
+      <div class="bg-image-room" style="background-image:url()"></div>
+
+      <button class="room-left-button" onclick="plusRoomGallery(-1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+      <button class="room-right-button" onclick="plusRoomGallery(+1)">
+        <img src="/images/right-arrow.svg">
+      </button>
+    <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
+
+      <div class="button-1 button-ochre align-center" id="show-3">
+        <a href="#popup-room-details-3" class="open-room-details-3">
               <!-- this changes the text within the anchor link based on the language -->
               
                   Details
               
               <img src="/images/right-arrow.svg" alt="right arrow">
         </a>
+      </div>
 
-        <div id="popup-room-details-3" class="mfp-hide room-details-popup">
-          <h2>  </h2>
-          
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
-          <img src="/images/blog-photo.jpg" class="small-image">
+      <div id="popup-room-details-3" class="room-details-popup">
+        <div class="grid">
+          <div class="col-7">
+                <h2> A La Calle </h2>
+                <p> Mathilda te ofrece 3 tipos de habitaciones según su ubicación dentro de la casa.</p>
+                <div class="button-left button-ochre left">
+                    <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
+                </div>
+          </div>
+          <div class="col-5">
+            <ul> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> <li> Test 123 </li> </ul>
+          </div>
+          <span class="close-icon" id="hide-3"> X </span>
         </div>
-
       </div>
       <!-- end popup div -->
+    </div>
+
+    
+
     </div>
   </section>
 
@@ -244,34 +304,37 @@
       <div class="col-6_xs-12 padded-8">
         <h1>info title</h1>
         <div class="bump-right p-bold">
-            
+            <p>Casa Mathilda es un Bed &amp; Breakfast Boutique situado en el barrio del Eixample de Barcelona, un vecindario elegante y a pocos metros de La Pedrera y de la Sagrada Familia. Ubicado en la planta principal de un edificio emblem&aacute;tico que perteneci&oacute; a una notable familia del textil catal&aacute;n de finales de siglo XIX. Fue totalmente rehabilitado en 2014 mezclando modernidad y un toque vintage y con acabados de primera calidad.</p><p>Cuidamos todos los detalles como lo har&iacute;a Mathilda, para que te sientas como en tu propia casa. En el desayuno ofrecemos productos frescos a diario, como el pan de la prestigiosa panader&iacute;a Baluard, fruta fresca, surtido de quesos, jamones y embutidos, yogures, cereales, tortilla y huevos, t&eacute;s, infusiones y ponemos a disposici&oacute;n una cafetera Nespresso para empezar el d&iacute;a con energ&iacute;a.</p><p>Adem&aacute;s, ofrecemos la opci&oacute;n de reserva completa de toda la casa para grupos y celebraciones. *sujeto a disponibilidad. Cons&uacute;ltanos tus inquietudes y necesidades a trave&eacute;s de nuestro e-mail o tel&eacute;fono.</p><p>Horario de recepci&oacute;n: 8.30h &ndash; 20.30h | Check-in: 15h Check-out: 12h</p>
         </div>
         <h2>Servicios</h2>
         <div class="bump-right padded-bottom">
-            
+            <ul><li>Servicio diario de habitaciones</li><li>WIFI gratuito en todo el establecimiento</li><li>Aire acondicionado / Calefacci&oacute;n en habitaciones y zonas comunes</li><li>C&aacute;maras de seguridad en zonas comunes</li><li>Habitaci&oacute;n adaptada y accesible a minusv&aacute;lidos</li><li>Cunas para beb&eacute;s bajo petici&oacute;n y gratuito para ni&ntilde;os de hasta 2 a&ntilde;os</li><li>Espacio sin humo, con detectores y rociadores anti-incendios</li><li>Servicio de guarda-maletas (horario de recepci&oacute;n)</li><li>Ventanas de m&aacute;ximo aislamiento del ruido exterior</li><li>Tel&eacute;fono en todas las habitaciones para llamadas nacionales y de emergencia</li><li>Alquiler de bicicletas</li></ul>
         </div>
 
-      </div>
-
-      <div class="col-5_xs-12">
-        <!-- this is where you change the image for each language -->
+        <!-- Who is Mathilda - - this is where you change the image for each language -->
+        
+        <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
         
 
           <div class="grid-middle show-on-hover">
             <p class="col-12 align-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-        </div>
-        </div>
+          </div> <!-- close hover div -->
+          </div> <!-- close mathilda div -->
+          <p class="align-center click-discover padded-bottom">
+
+            
+                <a href="#">Click for Description</a>
+            
+
+            <img src="/images/right-arrow-teal.svg" alt="right arrow">
+          </p>
 
 
-        <p class="align-center click-discover padded-bottom">
+      </div> <!-- closes the column -->
+      <div class="col-5_xs-12">
 
-          
-              <a href="#">Click for Description</a>
-          
-
-          <img src="/images/right-arrow-teal.svg" alt="right arrow"></p>
         <div class="bg-teal padded-10 margin-bottom margin-top blog-box">
           <h2 class="align-center">Últimas News</h2>
           <hr>
@@ -290,10 +353,10 @@
         <div class="button-1 align-center">
 
           
-              <a href="#">View All News</a>
+              <a href="#">View All News <img src="/images/right-arrow.svg" alt="right arrow"></a>
           
 
-          <img src="/images/right-arrow.svg" alt="right arrow">
+
         </div>
       </div>
     </div>
@@ -306,13 +369,13 @@
         <h1>Galería</h1>
         <p>Selecciona</p>
         <nav id="portfolio-filter">
-          <li><a href="">Todas</a> | </li>
-          <li><a href="">Habitaciones</a> | </li>
-          <li><a href="">Desayuno</a> | </li>
-          <li><a href="">Sala</a> | </li>
-          <li><a href="">Entrada</a> | </li>
-          <li><a href="">Terraza</a> | </li>
-          <li><a href="">Arquitectura</a></li>
+          <li><a href="" id="todas">Todas</a> | </li>
+          <li><a href="" id="habitaciones">Habitaciones</a> | </li>
+          <li><a href="" id="desayuno">Desayuno</a> | </li>
+          <li><a href="" id="sala">Sala</a> | </li>
+          <li><a href="" id="entrada">Entrada</a> | </li>
+          <li><a href="" id="terraza">Terraza</a> | </li>
+          <li><a href="" id="arquitectura">Arquitectura</a></li>
         </nav>
 
       
@@ -324,7 +387,7 @@
         </div>
         
         <div class="col-4_sm-6_xs-12 filterable-item todas" >
-          <img src="/images/room-mathilda.jpg" alt="photo casa mathilda">
+          <img src="/images/casa-mathilda-banner.jpg" alt="photo casa mathilda">
         </div>
         
         <div class="col-4_sm-6_xs-12 filterable-item habitaciones" >
@@ -351,8 +414,8 @@
       
 
       <div class="button-1 button-ochre button-insta">
-        <a href="http://instagram.com/casamathilda">Instagram</a>
-        <img src="/images/right-arrow.svg" alt="right arrow">
+        <a href="http://instagram.com/casamathilda">Instagram <img src="/images/right-arrow.svg" alt="right arrow"></a>
+        
       </div>
     </div>
     <div>
@@ -369,7 +432,7 @@
             <p class="bump-right p-bold">Teléfono: +34 935321600</p>
             <p class="bump-right p-bold">Email: info@casamathilda.com</p>
         </div>
-        
+        <p>Si tienes alguna duda, sugerencia o petición, por favor, no dudes en ponerte en contacto con nosotros. Estaremos encantados de saber de ti y de tener la oportunidad de ayudarte o de mejorar. </p>
         <form method="" action="">
           <!-- <label for="firstname" class="mob-show">Tu nombre</label> -->
           <input type="firstname" name="firstname" placeholder="Tu nombre" required>
@@ -387,7 +450,7 @@
           <p class="p-bold align-center"> Roger de Lluria, 125-127</p>
           <p class="p-bold align-center"> Barcelona</p>
 
-        
+        <p>Junto a la parada de metro Diagonal de las líneas L3 y L5, a 10 minutos a pie de las líneas L2 y L4. Autobuses cercanos: 6, 7, 16, 17, V17, 20, 22, 24, 33, 34, 39 y 45.</p>
       </div>
     </div>
   </section>

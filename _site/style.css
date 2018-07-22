@@ -519,7 +519,7 @@ footer nav a:hover, .copyright a:hover {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
-  display: block;
+  display: inline-block;
 }
 
 .button-1 img,
