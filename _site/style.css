@@ -208,12 +208,38 @@ footer {
 
 
 /* Popup Room Details */
-.slider-rooms .bg-image {
+.slider-rooms .bg-image-room {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.room-left-button,
+.room-right-button {
+  z-index:99;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: white;
+  max-width: 2rem;
+}
+
+.room-left-button {
+  left: 5%;
+  top:50%;
+}
+
+.room-right-button {
+  right: 3%;
+  top:50%;
+  z-index:99;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: white;
+  max-width: 2rem;
 }
 
 

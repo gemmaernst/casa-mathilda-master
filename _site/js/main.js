@@ -160,22 +160,20 @@ $('a[href*="#"]')
 
 
 // this gives you left and right buttons to toggle through classes
-  $(document).ready(function(){
-    var slideIndex = 1;
-    showRoomGallery(slideIndex);
+  var slideIndex = 1;
+  showRoomGallery(slideIndex);
 
-    function plusRoomGallery(n) {
-        showRoomGallery(slideIndex += n);
-    }
+  function plusRoomGallery(n) {
+      showRoomGallery(slideIndex += n);
+  }
 
-    function showRoomGallery(n) {
-        var i;
-        var x = document.getElementsByClassName("bg-image-room");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
-    }
-});
+  function showRoomGallery(n) {
+      var i;
+      var x = document.getElementsByClassName("bg-image-room");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+  }
