@@ -8,3 +8,17 @@ layout: default
   <div class="mySlides"> Hello 3 </div>
   <div class="mySlides"> Hello 4 </div>
 </section>
+
+
+temp for later
+
+
+{% if page.name contains "index" %}
+<a href="{{ site.baseurl }}/">ESP</a>
+<a href="{{ site.baseurl | append: "/en" }}">EN</a>
+<a href="{{ site.baseurl | append: "/fre" }}">FRE</a>
+{% else %}
+<a href="{{ site.baseurl | append: page.handle }}">ESP</a>
+<a href="{{ site.baseurl | append: "/en" | append: page.handle }}">EN</a>
+<a href="{{ site.baseurl | append: "/fre" | append: page.handle }}">FRE</a>
+{% endif %}

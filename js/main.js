@@ -113,3 +113,24 @@ $('a[href*="#"]')
       midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
   });
+
+
+  $(document).ready(function() {
+    $(window).on('load', function() {
+      var now, lastDatePopupShowed;
+      now = new Date();
+
+      if (localStorage.getItem('lastDatePopupShowed') !== null) {
+        lastDatePopupShowed = new Date(parseInt(localStorage.getItem('lastDatePopupShowed')));
+      }
+
+      if (((now - lastDatePopupShowed) >= (15 * 86400000)) || !lastDatePopupShowed) {
+        $.magnificPopup.open({
+          items: { src: '#launch-popup' },
+          type: 'inline'
+        }, 0);
+
+        localStorage.setItem('lastDatePopupShowed', now);
+      }
+    });
+  });

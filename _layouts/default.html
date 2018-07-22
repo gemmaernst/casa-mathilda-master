@@ -63,17 +63,54 @@
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
           <li><a href="/#contact" class="light">Contacto</a></li>
-          <li><a href="/#press" class="light">Prensa</a></li>
-          <li><a href="/#news" class="light">News</a></li>
+          <li><a href="/press" class="light">Prensa</a></li>
+          <li><a href="/news" class="light">News</a></li>
 
-            <li>
+            <!-- <li>
               <li>
-                <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
-                <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
-                <a href="#googtrans(es|fr)" class="lang-fr lang-select" data-lang="fr">FRE</a>
+                <a href="/index" class="lang-es lang-select" data-lang="es">ESP</a>
+                <a href="/en/" class="lang-en lang-select" data-lang="en">EN</a>
+                <a href="/fr/" class="lang-fr lang-select" data-lang="fr">FRE</a>
             </li>
-          </li>
+          </li> -->
         </nav>
+
+        <div class="dropdown">
+
+          {% if page.language == 'es' %}
+
+          <button class="dropbtn">
+            ESP <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+          </button>
+          <div class="dropdown-content">
+            <a href="/en/" data-lang="en">ENG</a>
+            <a href="/fr/" data-lang="fr">FRE</a>
+          </div>
+
+          {% elsif page.language == 'en' %}
+
+          <button class="dropbtn">
+            ENG <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+          </button>
+          <div class="dropdown-content">
+            <a href="/" data-lang="es">ESP</a>
+            <a href="/fr/" data-lang="fr">FRE</a>
+          </div>
+
+          {% elsif page.language == 'fr' %}
+
+          <button class="dropbtn">
+            FRE <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+          </button>
+          <div class="dropdown-content">
+            <a href="/en/" data-lang="en">ENG</a>
+            <a href="/" data-lang="es">ESP</a>
+          </div>
+
+          {% endif %}
+
+        </div>
+
       </div>
 
       <nav class="mob-nav">
@@ -111,7 +148,7 @@
 
       {{content}}
 
-      <div class="body-content">
+
       <footer class="align-center bg-beige">
         <div class="top-arrow"><a href="#top"><img src="/images/up-arrow.svg" alt="up arrow"></a></div>
         <nav>
@@ -126,7 +163,7 @@
           <p>Copyright © 2018 Casa Mathilda | <a href="http://loveiscreative.com">Site Credits</a></p>
         </div>
       </footer>
-    </div>
+
     <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 
@@ -140,42 +177,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
 
-
-    <!-- this is the google translate widget -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'es', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
-        }
-
-    	function triggerHtmlEvent(element, eventName) {
-    	  var event;
-    	  if (document.createEvent) {
-    		event = document.createEvent('HTMLEvents');
-    		event.initEvent(eventName, true, true);
-    		element.dispatchEvent(event);
-    	  } else {
-    		event = document.createEventObject();
-    		event.eventType = eventName;
-    		element.fireEvent('on' + event.eventType, event);
-    	  }
-    	}
-
-    	jQuery('.lang-select').click(function() {
-    	  var theLang = jQuery(this).attr('data-lang');
-    	  jQuery('.goog-te-combo').val(theLang);
-
-    	  //alert(jQuery(this).attr('href'));
-    	  window.location = jQuery(this).attr('href');
-    	  location.reload();
-
-    	});
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <!-- end google translate -->
-
-    <script>
-
-    // This is the automatic background slider on the homepage
+      <script>
+      // This is the automatic background slider on the homepage
 
       var slideIndex = 0;
       carousel();

@@ -6,16 +6,24 @@ intro-banner: true
   <!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
   <section class="bg-beige">
     <div class="padded-8">
-      <h1>{{page.rooms-Title}}</h1>
+      <h1>{{page.rooms-title}}</h1>
       <p class="narrow-width bump-right p-bold">{{page.rooms-description}}</p>
     </div>
     <div class="padded-left padded-2 link-menu" id="rooms">
-      <p>{{page.rooms-title2}}</p>
+      <p>{{page.rooms-title-2}}</p>
+
+      {% if page.language == 'es' %}
       <nav id="rooms-filter">
         <li><a href="#">Terraza</a> | </li>
         <li><a href="#">Interiores</a> | </li>
         <li><a href="#">A la Calle</a></li>
       </nav>
+      {% elsif page.language == 'en' %}
+
+      {% elsif page.language == 'fr' %}
+
+      {% endif %}
+
     </div>
     <!-- we need to create one of these for each of the room types -->
     <div id="rooms-grid">
@@ -24,16 +32,18 @@ intro-banner: true
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detalles</a>
+        {% if page.language == 'es' %}
+            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detalles</a>
+        {% elsif page.language == 'en' %}
+            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detailes</a>
+        {% elsif page.language == 'fr' %}
+            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detalles</a>
+        {% endif %}
+
 
         <div id="popup-room-details-1" class="mfp-hide room-details-popup">
-          <h2> Room Type Name </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <ul>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-          </ul>
+          <h2> {{page.room-details-1-title}} </h2>
+          {{page.room-details-1_markdown}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -50,16 +60,18 @@ intro-banner: true
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Detalles</a>
+        {% if page.language == 'es' %}
+            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Detalles</a>
+        {% elsif page.language == 'en' %}
+            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Details</a>
+        {% elsif page.language == 'fr' %}
+            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Detalles</a>
+        {% endif %}
+
 
         <div id="popup-room-details-2" class="mfp-hide room-details-popup">
-          <h2> Room Type 2 </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <ul>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-          </ul>
+          <h2> {{page.room-details-2-title}} </h2>
+          {{page.room-details-2_markdown}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -74,16 +86,17 @@ intro-banner: true
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Detalles</a>
+        {% if page.language == 'es' %}
+            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Detalles</a>
+        {% elsif page.language == 'en' %}
+            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Details</a>
+        {% elsif page.language == 'fr' %}
+            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Detalles</a>
+        {% endif %}
 
         <div id="popup-room-details-3" class="mfp-hide room-details-popup">
-          <h2> Room Type 3 </h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <ul>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-            <li> This is a list item </li>
-          </ul>
+          <h2> {{page.room-details-3-title}} </h2>
+          {{page.room-details-3_markdown}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -100,45 +113,66 @@ intro-banner: true
   <section class="bg-image bg-box">
     <div class="grid-middle-spaceBetween bg-beige padded-8" id="info">
       <div class="col-6_xs-12 padded-8">
-        <h1>Info</h1>
-        <p class="bump-right p-bold">Casa Mathilda es un Bed & Breakfast Boutique situado en el barrio del Eixample de Barcelona, un vecindario elegante y a pocos metros de La Pedrera y de la Sagrada Familia. Ubicado en la planta principal de un edificio emblemático  que perteneció a  una notable familia del textil catalán de finales de siglo XIX.  Fue totalmente rehabilitado en 2014 mezclando modernidad y un toque vintage y con acabados de primera calidad.</p>
-        <p class="bump-right p-bold">Cuidamos todos los detalles como lo haría Mathilda, para que te sientas como en tu propia casa. En el desayuno ofrecemos productos frescos a diario, como el pan de la prestigiosa panadería Baluard, fruta fresca, surtido de quesos, jamones y embutidos, yogures, cereales, tortilla y huevos, tés, infusiones y ponemos a disposición una cafetera Nespresso para empezar el día con energía.</p>
-        <p class="bump-right p-bold">Además, ofrecemos la opción de reserva completa de toda la casa para grupos y celebraciones. *sujeto a disponibilidad. Consúltanos tus inquietudes y necesidades a traveés de nuestro e-mail o teléfono.</p>
-        <p class="bump-right p-bold padded-bottom">Horario de recepción: 8.30h – 20.30h | Check-in: 15h  Check-out: 12h</p>
-        <h2>Servicios</h2>
-        <ul class="bump-right padded-bottom">
-          <li>Servicio diario de habitaciones</li>
-          <li>WIFI gratuito en todo el establecimiento</li>
-          <li>Aire acondicionado / Calefacción en habitaciones y zonas comunes</li>
-          <li>Cámaras de seguridad en zonas comunes</li>
-          <li>Habitación adaptada y accesible a minusválidos</li>
-          <li>Cunas para bebés bajo petición y gratuito para niños de hasta 2 años</li>
-          <li>Espacio sin humo, con detectores y rociadores anti-incendios</li>
-          <li>Servicio de guarda-maletas (horario de recepción)</li>
-          <li>Ventanas de máximo aislamiento del ruido exterior</li>
-          <li>Teléfono en todas las habitaciones para llamadas nacionales y de emergencia</li>
-          <li>Alquiler de bicicletas</li>
-        </ul>
+        <h1>{{page.info-title}}</h1>
+        <div class="bump-right p-bold">
+            {{page.info_markdown}}
+        </div>
+        <h2>{{page.services-title}}</h2>
+        <div class="bump-right padded-bottom">
+            {{page.services_markdown}}
+        </div>
+
       </div>
       <div class="col-5_xs-12">
         <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
           <div class="grid-middle show-on-hover">
-            <p class="col-12 align-center"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p class="col-12 align-center">
+              {{page.who-is-mathilda}}
+            </p>
         </div>
         </div>
 
 
-        <p class="align-center click-discover padded-bottom"><a href="#">Click para descubrirlo</a><img src="/images/right-arrow-teal.svg" alt="right arrow"></p>
+        <p class="align-center click-discover padded-bottom">
+
+          {% if page.language == 'es' %}
+              <a href="#">Click for Description</a>
+          {% elsif page.language == 'en' %}
+              <a href="#">Click for Description</a>
+          {% elsif page.language == 'fr' %}
+              <a href="#">Click for Description</a>
+          {% endif %}
+
+          <img src="/images/right-arrow-teal.svg" alt="right arrow"></p>
         <div class="bg-teal padded-10 margin-bottom margin-top blog-box">
-          <h2 class="align-center">Últimas News</h2>
+          <h2 class="align-center">{{page.news-title}}</h2>
           <hr>
           <img src="/images/blog-photo.jpg" alt="blog-photo" class="padded-bottom align-center">
           <h3 class="align-center">Blog Title</h3>
           <p>Blog Text. Lorem ipsum dolor sit amet, conseur adipiscing elit. Phasellus varius sit amet mi viverra hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius sit amet mi viverra hendrerit.</p>
-          <div class="align-center button-2"><a href="#">Leer más</a></div>
+
+          <div class="align-center button-2">
+
+            {% if page.language == 'es' %}
+                <a href="#">Leer más</a>
+            {% elsif page.language == 'en' %}
+                <a href="#">Read More</a>
+            {% elsif page.language == 'fr' %}
+                <a href="#">Read More</a>
+            {% endif %}
+
+          </div>
         </div>
         <div class="button-1 align-center">
-          <a href="#">Todas las News</a>
+
+          {% if page.language == 'es' %}
+              <a href="#">Todas las News</a>
+          {% elsif page.language == 'en' %}
+              <a href="#">View All News</a>
+          {% elsif page.language == 'fr' %}
+              <a href="#">View All News</a>
+          {% endif %}
+
           <img src="/images/right-arrow.svg" alt="right arrow">
         </div>
       </div>
@@ -146,6 +180,37 @@ intro-banner: true
 
     <!-- - - - - - - - - - - SECTION: GALLERY - - - - - - - - - -  -->
     <div class="bg-beige padded-8 margin-top link-menu" id="gallery">
+
+      {% if page.language == 'es' %}
+
+        <h1>Galería</h1>
+        <p>Selecciona</p>
+        <nav id="portfolio-filter">
+          <li><a href="">Todas</a> | </li>
+          <li><a href="">Habitaciones</a> | </li>
+          <li><a href="">Desayuno</a> | </li>
+          <li><a href="">Sala</a> | </li>
+          <li><a href="">Entrada</a> | </li>
+          <li><a href="">Terraza</a> | </li>
+          <li><a href="">Arquitectura</a></li>
+        </nav>
+
+      {% elsif page.language == 'en' %}
+
+        <h1>Galería</h1>
+        <p>Selecciona</p>
+        <nav id="portfolio-filter">
+          <li><a href="">Todas</a> | </li>
+          <li><a href="">Habitaciones</a> | </li>
+          <li><a href="">Desayuno</a> | </li>
+          <li><a href="">Sala</a> | </li>
+          <li><a href="">Entrada</a> | </li>
+          <li><a href="">Terraza</a> | </li>
+          <li><a href="">Arquitectura</a></li>
+        </nav>
+
+      {% elsif page.language =='fr' %}
+
       <h1>Galería</h1>
       <p>Selecciona</p>
       <nav id="portfolio-filter">
@@ -157,18 +222,15 @@ intro-banner: true
         <li><a href="">Terraza</a> | </li>
         <li><a href="">Arquitectura</a></li>
       </nav>
+
+      {% endif %}
+
       <div class="grid gallery" id="portfolio-grid">
-        {%for item in page.gallery %}
+        {% for item in site.data.gallery %}
         <div class="col-4_sm-6_xs-12 filterable-item {{item.category}}" >
           <img src="{{item.image_path}}" alt="{{item.image_description}}">
         </div>
-        {%endfor %}
-        <div class="col-4_sm-6_xs-12 filterable-item habitaciones">
-          <img src="/images/room-mathilda.jpg" alt="photo casa mathilda">
-        </div>
-        <div class="col-4_sm-6_xs-12 filterable-item desayuno">
-          <img src="/images/room-mathilda.jpg" alt="photo casa mathilda">
-        </div>
+        {% endfor %}
       </div>
     </div>
     <!-- - - - - - - - - - - grid - - - - - - - - - - -  -->
@@ -179,7 +241,15 @@ intro-banner: true
   <!-- - - - - - - - - - - INSTAGRAM WIDGET - - - - - - - - - -  -->
   <section class="bg-teal">
     <div class="padded-8">
+
+      {% if page.language == 'es' %}
       <h2>Sigue a Casa Mathilda</h2>
+      {% elsif page.language == 'en' %}
+      <h2>Follow Casa Mathilda</h2>
+      {% elsif page.language == 'fr' %}
+      <h2>Sigue a Casa Mathilda</h2>
+      {% endif %}
+
       <div class="button-1 button-ochre button-insta">
         <a href="http://instagram.com/casamathilda">Instagram</a>
         <img src="/images/right-arrow.svg" alt="right arrow">
@@ -194,10 +264,12 @@ intro-banner: true
     <!-- - - - - - - - - - - SECTION: CONTACT - - - - - - - - - -  -->
     <div class="grid-middle-spaceBetween padded-8" id="contact">
       <div class="col-6_xs-12 padded-8">
-        <h1>Contacto</h1>
-        <p class="p-bold bump-right">Teléfono: +34 935321600 </p>
-        <p class="p-bold bump-right">Email: info@casamathilda.com </p>
-        <p>Si tienes alguna duda, sugerencia o petición, por favor, no dudes en ponerte en contacto con nosotros. Estaremos encantados de saber de ti y de tener la oportunidad de ayudarte o de mejorar.</p>
+        <h1>{{page.contact-title}}</h1>
+        <div>
+            <p class="bump-right p-bold">{{page.contact-phone}}</p>
+            <p class="bump-right p-bold">{{page.contact-email}}</p>
+        </div>
+        {{page.contact_markdown}}
         <form method="" action="">
           <!-- <label for="firstname" class="mob-show">Tu nombre</label> -->
           <input type="firstname" name="firstname" placeholder="Tu nombre" required>
@@ -210,15 +282,21 @@ intro-banner: true
         </form>
       </div>
       <div class="col-4_xs-12 address-box padded-5">
-        <h2 class="align-center">Cómo Llegar</h2>
+        <h2 class="align-center">{{page.address-title}}</h2>
         <hr>
-        <p class="p-bold align-center">Roger de Lluria, 125-127</p>
-        <p class="p-bold align-center">Barcelona</p>
-        <p>Junto a la parada de metro Diagonal de las líneas L3 y L5, a 10 minutos a pie de las líneas L2 y L4.</p>
-        <p>Autobuses cercanos: 6, 7, 16, 17, V17, 20, 22, 24, 33, 34, 39 y 45.</p>
+          <p class="p-bold align-center"> {{page.address}}</p>
+          <p class="p-bold align-center"> {{page.city}}</p>
+
+        {{page.directions_markdown}}
       </div>
     </div>
-    <div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.9479093214813!2d2.161464915383106!3d41.39693760336602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a294be90cebf%3A0xe80d18c953205613!2sCasa+Mathilda+%7C+Barcelona!5e0!3m2!1sen!2sid!4v1532076689863" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
   </section>
+  <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.9479093214813!2d2.161464915383106!3d41.39693760336602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a294be90cebf%3A0xe80d18c953205613!2sCasa+Mathilda+%7C+Barcelona!5e0!3m2!1sen!2sid!4v1532076689863" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+<!-- This is the magnificPopup Javascript -->
+  <div id="launch-popup" class="launch-popup mfp-hide">
+  Popup Form
+  </div>
+  <!--End magnificPopup  -->
