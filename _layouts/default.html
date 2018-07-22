@@ -2,60 +2,17 @@
 <html>
 
 <head>
-  <title>Casa Mathilda - Bed & Breakfast in Barcelona</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-  <!-- Gridlex, Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,500|Raleway:500,500i" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- Open Graph Data -->
-  <meta property="og:url" content="http://casamathilda.com" />
-  <meta property="og:title" content="Casa Mathilda" />
-  <meta property="og:image" content="xxxxxxxxx" />
-  <meta property="og:site_name" content="Casa Mathilda" />
-  <meta property="og:description" content="Bed & Breakfast in Barcelona" />
-
-  <!-- Favicons -->
-
-  <!-- Google Analytics -->
-
-
-
+  {% include head.html %}
 </head>
 
 <body class="bg-image">
-
-  {% if page.intro-banner %}
-  <div class="bg-image-slide bg-slide-1">
-    <div class="padded-2 bump-right transbox">
-      <h1> 1. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  <div class="bg-image-slide bg-slide-2">
-    <div class="padded-2 bump-right transbox">
-      <h1>2. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  <div class="bg-image-slide bg-slide-3">
-    <div class="padded-2 bump-right transbox">
-      <h1>3. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  {% endif %}
 
     <header id="top">
       <!-- - - - - - - - - - - LOGO - - - - - - - - - -  -->
       <a href="/index.html"><img src="/images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo mob-hide"></a>
 
       <!-- - - - - - - - - - - NAVIGATION BAR - - - - - - - - - -  -->
+      <!-- sidebar navigation -->
       <div class="sidebar mob-hide">
         <nav>
 
@@ -63,7 +20,16 @@
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
           <li><a href="/#contact" class="light">Contacto</a></li>
+
+          {% if page.language == 'es' %}
           <li><a href="/press" class="light">Prensa</a></li>
+          {% elsif page.language == 'en' %}
+          <li><a href="/en/press" class="light">Prensa</a></li>
+          {% elsif page.language == 'fr' %}
+          <li><a href="/fr/press" class="light">Prensa</a></li>
+          {% endif %}
+
+
           <li><a href="/news" class="light">News</a></li>
 
             <!-- <li>
@@ -113,6 +79,7 @@
 
       </div>
 
+      <!-- mobile navigation -->
       <nav class="mob-nav">
         <a href="index.html"><img src="images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo"></a>
         <div class="burger-button">
@@ -127,8 +94,17 @@
             <li><a href="/#info">Info</a></li>
             <li><a href="/#gallery">Galería</a></li>
             <li><a href="/#contact" class="light">Contacto</a></li>
-            <li><a href="/#press" class="light">Prensa</a></li>
-            <li><a href="/#news" class="light">News</a></li>
+
+            {% if page.language == 'es' %}
+            <li><a href="/press" class="light">Prensa</a></li
+            {% elsif page.language == 'en' %}
+            <li><a href="/en/press" class="light">Prensa</a></li>
+            {% elsif page.language == 'fr' %}
+            <li><a href="/fr/press" class="light">Prensa</a></li>
+
+            {% endif %}
+
+            <li><a href="/news" class="light">News</a></li>
               <li>
                 <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
                 <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
@@ -139,7 +115,15 @@
       </nav>
 
       <!-- - - - - - - - - - - BOOK BUTTON - - - - - - - - - -  -->
-      <a href="#"><img src="/images/book-button.png" alt="book button" class="book-button"></a>
+      <a href="#">
+        {% if page.language == 'es' %}
+        <img src="/images/book-button.png" alt="book button" class="book-button">
+        {% elsif page.language == 'en' %}
+        <img src="/images/book-button.png" alt="book button" class="book-button">
+        {% elsif page.language == 'fr' %}
+        <img src="/images/book-button.png" alt="book button" class="book-button">
+        {% endif %}
+      </a>
 
       <!-- - - - - - - - - - - BANNER - - - - - - - - - -  -->
 
@@ -164,35 +148,7 @@
         </div>
       </footer>
 
-    <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-
-    <!-- magnific popup lightbox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-
-
-      <script>
-      // This is the automatic background slider on the homepage
-
-      var slideIndex = 0;
-      carousel();
-
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("bg-image-slide");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > x.length) {slideIndex = 1}
-          x[slideIndex-1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-    // end background slides
-
-    </script>
-
-    <script src="/js/main.js"></script>
+      {% include body-scripts.html %}
 
     </body>
     </html>

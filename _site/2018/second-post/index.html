@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  
   <title>Casa Mathilda - Bed & Breakfast in Barcelona</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,19 +28,16 @@
 
   <!-- Google Analytics -->
 
-
-
 </head>
 
 <body class="bg-image">
-
-  
 
     <header id="top">
       <!-- - - - - - - - - - - LOGO - - - - - - - - - -  -->
       <a href="/index.html"><img src="/images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo mob-hide"></a>
 
       <!-- - - - - - - - - - - NAVIGATION BAR - - - - - - - - - -  -->
+      <!-- sidebar navigation -->
       <div class="sidebar mob-hide">
         <nav>
 
@@ -47,7 +45,10 @@
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
           <li><a href="/#contact" class="light">Contacto</a></li>
-          <li><a href="/press" class="light">Prensa</a></li>
+
+          
+
+
           <li><a href="/news" class="light">News</a></li>
 
             <!-- <li>
@@ -67,6 +68,7 @@
 
       </div>
 
+      <!-- mobile navigation -->
       <nav class="mob-nav">
         <a href="index.html"><img src="images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo"></a>
         <div class="burger-button">
@@ -81,8 +83,10 @@
             <li><a href="/#info">Info</a></li>
             <li><a href="/#gallery">Galería</a></li>
             <li><a href="/#contact" class="light">Contacto</a></li>
-            <li><a href="/#press" class="light">Prensa</a></li>
-            <li><a href="/#news" class="light">News</a></li>
+
+            
+
+            <li><a href="/news" class="light">News</a></li>
               <li>
                 <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
                 <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
@@ -93,7 +97,9 @@
       </nav>
 
       <!-- - - - - - - - - - - BOOK BUTTON - - - - - - - - - -  -->
-      <a href="#"><img src="/images/book-button.png" alt="book button" class="book-button"></a>
+      <a href="#">
+        
+      </a>
 
       <!-- - - - - - - - - - - BANNER - - - - - - - - - -  -->
 
@@ -140,35 +146,36 @@
         </div>
       </footer>
 
-    <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+      <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 
-    <!-- magnific popup lightbox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<!-- magnific popup lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
 
-      <script>
-      // This is the automatic background slider on the homepage
+  <script>
+  // This is the automatic background slider on the homepage
 
-      var slideIndex = 0;
-      carousel();
+  var slideIndex = 0;
+  carousel();
 
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("bg-image-slide");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > x.length) {slideIndex = 1}
-          x[slideIndex-1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-    // end background slides
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("bg-image-slide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+// end background slides
 
-    </script>
+</script>
 
-    <script src="/js/main.js"></script>
+<script src="/js/main.js"></script>
+
 
     </body>
     </html>

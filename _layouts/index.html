@@ -1,8 +1,26 @@
 ---
 layout: default
-intro-banner: true
-
 ---
+
+
+<div class="bg-image-slide bg-slide-1">
+  <div class="padded-2 bump-right transbox">
+    <h1> {{page.intro-banner}}</h1>
+  </div>
+</div>
+<div class="bg-image-slide bg-slide-2">
+  <div class="padded-2 bump-right transbox">
+    <h1>{{page.intro-banner}}</h1>
+  </div>
+</div>
+<div class="bg-image-slide bg-slide-3">
+  <div class="padded-2 bump-right transbox">
+    <h1> {{page.intro-banner}}</h1>
+  </div>
+</div>
+
+
+
   <!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
   <section class="bg-beige">
     <div class="padded-8">
@@ -19,9 +37,17 @@ intro-banner: true
         <li><a href="#">A la Calle</a></li>
       </nav>
       {% elsif page.language == 'en' %}
-
+      <nav id="rooms-filter">
+        <li><a href="#">Terrace</a> | </li>
+        <li><a href="#">Interiores</a> | </li>
+        <li><a href="#">A la Calle</a></li>
+      </nav>
       {% elsif page.language == 'fr' %}
-
+      <nav id="rooms-filter">
+        <li><a href="#">Terraza</a> | </li>
+        <li><a href="#">Interiores</a> | </li>
+        <li><a href="#">A la Calle</a></li>
+      </nav>
       {% endif %}
 
     </div>
@@ -32,13 +58,17 @@ intro-banner: true
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        {% if page.language == 'es' %}
-            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detalles</a>
-        {% elsif page.language == 'en' %}
-            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detailes</a>
-        {% elsif page.language == 'fr' %}
-            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detalles</a>
-        {% endif %}
+        <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              {% if page.language == 'es' %}
+                  Detalles
+              {% elsif page.language == 'en' %}
+                  Details
+              {% elsif page.language == 'fr' %}
+                  Details
+              {% endif %}
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
 
         <div id="popup-room-details-1" class="mfp-hide room-details-popup">
@@ -49,7 +79,6 @@ intro-banner: true
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
       </div>
       <!-- end popup div -->
     </div>
@@ -59,15 +88,17 @@ intro-banner: true
       <div class="button-1 button-ochre align-center">
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
-
-        {% if page.language == 'es' %}
-            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Detalles</a>
-        {% elsif page.language == 'en' %}
-            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Details</a>
-        {% elsif page.language == 'fr' %}
-            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Detalles</a>
-        {% endif %}
-
+        <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              {% if page.language == 'es' %}
+                  Detalles
+              {% elsif page.language == 'en' %}
+                  Details
+              {% elsif page.language == 'fr' %}
+                  Details
+              {% endif %}
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
         <div id="popup-room-details-2" class="mfp-hide room-details-popup">
           <h2> {{page.room-details-2-title}} </h2>
@@ -77,7 +108,7 @@ intro-banner: true
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
+
       </div>
       <!-- end popup div -->
     </div>
@@ -86,13 +117,17 @@ intro-banner: true
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        {% if page.language == 'es' %}
-            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Detalles</a>
-        {% elsif page.language == 'en' %}
-            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Details</a>
-        {% elsif page.language == 'fr' %}
-            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Detalles</a>
-        {% endif %}
+        <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              {% if page.language == 'es' %}
+                  Detalles
+              {% elsif page.language == 'en' %}
+                  Details
+              {% elsif page.language == 'fr' %}
+                  Details
+              {% endif %}
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
         <div id="popup-room-details-3" class="mfp-hide room-details-popup">
           <h2> {{page.room-details-3-title}} </h2>
@@ -102,7 +137,6 @@ intro-banner: true
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
       </div>
       <!-- end popup div -->
     </div>
@@ -123,8 +157,17 @@ intro-banner: true
         </div>
 
       </div>
+
       <div class="col-5_xs-12">
+        <!-- this is where you change the image for each language -->
+        {% if page.language == 'es' %}
         <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
+        {% elsif page.language == 'es' %}
+        <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
+        {% elsif page.language == 'es' %}
+        <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
+        {% endif %}
+
           <div class="grid-middle show-on-hover">
             <p class="col-12 align-center">
               {{page.who-is-mathilda}}

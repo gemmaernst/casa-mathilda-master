@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  
   <title>Casa Mathilda - Bed & Breakfast in Barcelona</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,35 +28,16 @@
 
   <!-- Google Analytics -->
 
-
-
 </head>
 
 <body class="bg-image">
-
-  
-  <div class="bg-image-slide bg-slide-1">
-    <div class="padded-2 bump-right transbox">
-      <h1> 1. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  <div class="bg-image-slide bg-slide-2">
-    <div class="padded-2 bump-right transbox">
-      <h1>2. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  <div class="bg-image-slide bg-slide-3">
-    <div class="padded-2 bump-right transbox">
-      <h1>3. Una estancia en Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
-    </div>
-  </div>
-  
 
     <header id="top">
       <!-- - - - - - - - - - - LOGO - - - - - - - - - -  -->
       <a href="/index.html"><img src="/images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo mob-hide"></a>
 
       <!-- - - - - - - - - - - NAVIGATION BAR - - - - - - - - - -  -->
+      <!-- sidebar navigation -->
       <div class="sidebar mob-hide">
         <nav>
 
@@ -63,7 +45,12 @@
           <li><a href="/#info">Info</a></li>
           <li><a href="/#gallery">Galería</a></li>
           <li><a href="/#contact" class="light">Contacto</a></li>
-          <li><a href="/press" class="light">Prensa</a></li>
+
+          
+          <li><a href="/en/press" class="light">Prensa</a></li>
+          
+
+
           <li><a href="/news" class="light">News</a></li>
 
             <!-- <li>
@@ -93,6 +80,7 @@
 
       </div>
 
+      <!-- mobile navigation -->
       <nav class="mob-nav">
         <a href="index.html"><img src="images/logo-casa-mathilda.png" alt="casa mathilda logo" class="logo"></a>
         <div class="burger-button">
@@ -107,8 +95,12 @@
             <li><a href="/#info">Info</a></li>
             <li><a href="/#gallery">Galería</a></li>
             <li><a href="/#contact" class="light">Contacto</a></li>
-            <li><a href="/#press" class="light">Prensa</a></li>
-            <li><a href="/#news" class="light">News</a></li>
+
+            
+            <li><a href="/en/press" class="light">Prensa</a></li>
+            
+
+            <li><a href="/news" class="light">News</a></li>
               <li>
                 <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
                 <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
@@ -119,14 +111,36 @@
       </nav>
 
       <!-- - - - - - - - - - - BOOK BUTTON - - - - - - - - - -  -->
-      <a href="#"><img src="/images/book-button.png" alt="book button" class="book-button"></a>
+      <a href="#">
+        
+        <img src="/images/book-button.png" alt="book button" class="book-button">
+        
+      </a>
 
       <!-- - - - - - - - - - - BANNER - - - - - - - - - -  -->
 
 
     </header>
 
-        <!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
+      <div class="bg-image-slide bg-slide-1">
+  <div class="padded-2 bump-right transbox">
+    <h1> A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  </div>
+</div>
+<div class="bg-image-slide bg-slide-2">
+  <div class="padded-2 bump-right transbox">
+    <h1>A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  </div>
+</div>
+<div class="bg-image-slide bg-slide-3">
+  <div class="padded-2 bump-right transbox">
+    <h1> A grand hotel in Barcelona con la calidez de tu propia casa y la eficiencia de un gran hotel.</h1>
+  </div>
+</div>
+
+
+
+  <!-- - - - - - - - - - - SECTION: ROOMS - - - - - - - - - -  -->
   <section class="bg-beige">
     <div class="padded-8">
       <h1>Habitaciones</h1>
@@ -136,7 +150,11 @@
       <p>Rooms Title 2</p>
 
       
-
+      <nav id="rooms-filter">
+        <li><a href="#">Terrace</a> | </li>
+        <li><a href="#">Interiores</a> | </li>
+        <li><a href="#">A la Calle</a></li>
+      </nav>
       
 
     </div>
@@ -147,9 +165,13 @@
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        
-            <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">Detailes</a>
-        
+        <a href="#popup-room-details-1" class="open-room-details-1" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              
+                  Details
+              
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
 
         <div id="popup-room-details-1" class="mfp-hide room-details-popup">
@@ -160,7 +182,6 @@
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
       </div>
       <!-- end popup div -->
     </div>
@@ -170,11 +191,13 @@
       <div class="button-1 button-ochre align-center">
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
-
-        
-            <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">Details</a>
-        
-
+        <a href="#popup-room-details-2" class="open-room-details-2" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              
+                  Details
+              
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
         <div id="popup-room-details-2" class="mfp-hide room-details-popup">
           <h2> Title </h2>
@@ -184,7 +207,7 @@
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
+
       </div>
       <!-- end popup div -->
     </div>
@@ -193,9 +216,13 @@
 
         <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
 
-        
-            <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">Details</a>
-        
+        <a href="#popup-room-details-3" class="open-room-details-3" title="The Cleaner">
+              <!-- this changes the text within the anchor link based on the language -->
+              
+                  Details
+              
+              <img src="/images/right-arrow.svg" alt="right arrow">
+        </a>
 
         <div id="popup-room-details-3" class="mfp-hide room-details-popup">
           <h2>  </h2>
@@ -205,7 +232,6 @@
           <img src="/images/blog-photo.jpg" class="small-image">
         </div>
 
-        <img src="/images/right-arrow.svg" alt="right arrow">
       </div>
       <!-- end popup div -->
     </div>
@@ -226,8 +252,11 @@
         </div>
 
       </div>
+
       <div class="col-5_xs-12">
-        <div class="postal-mathilda" style="background-image:url('/images/postal-mathilda.png')";>
+        <!-- this is where you change the image for each language -->
+        
+
           <div class="grid-middle show-on-hover">
             <p class="col-12 align-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -391,35 +420,36 @@
         </div>
       </footer>
 
-    <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+      <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 
-    <!-- magnific popup lightbox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<!-- magnific popup lightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
 
 
-      <script>
-      // This is the automatic background slider on the homepage
+  <script>
+  // This is the automatic background slider on the homepage
 
-      var slideIndex = 0;
-      carousel();
+  var slideIndex = 0;
+  carousel();
 
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("bg-image-slide");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > x.length) {slideIndex = 1}
-          x[slideIndex-1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-    // end background slides
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("bg-image-slide");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+// end background slides
 
-    </script>
+</script>
 
-    <script src="/js/main.js"></script>
+<script src="/js/main.js"></script>
+
 
     </body>
     </html>

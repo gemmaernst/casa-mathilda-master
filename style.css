@@ -442,7 +442,7 @@ footer nav a:hover, .copyright a:hover {
 .button-1 {
   background-color: #CECBC2;
   /* display: inline-block; */
-  padding: .8em 2em .8em;
+  /* padding: .8em 2em .8em; */
   line-height: 1em;
   transition: 0.2s ease;
   width: 215px;
@@ -459,10 +459,12 @@ footer nav a:hover, .copyright a:hover {
 
 .button-1 a {
   text-transform: uppercase;
+  padding: .8em 2em .8em;
   line-height: 1em;
   font-size: 1em;
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 
 .button-1 img {
