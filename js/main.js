@@ -12,7 +12,7 @@ $(document).ready(function(){
     $(this).addClass('active');
 
     /* get the name of the cateory from this link */
-    var filterVal = $(this).text().toLowerCase().replace(' ','-').replace(' ','-');
+    var filterVal = $(this).attr('id');
 
     $('#portfolio-grid .filterable-item').each(function() {
         if(filterVal == 'all'){
@@ -39,7 +39,7 @@ $(document).ready(function(){
       $(this).addClass('active');
 
       /* get the name of the cateory from this link */
-      var filterVal = $(this).text().toLowerCase().replace(' ','-').replace(' ','-');
+      var filterVal = $(this).attr('id');
 
       $('#rooms-grid .filterable-item').each(function() {
           if(filterVal == 'all'){

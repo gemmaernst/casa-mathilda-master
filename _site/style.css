@@ -229,6 +229,7 @@ footer {
 .room-left-button {
   left: 5%;
   top:50%;
+  transform: rotateZ(180deg);
 }
 
 .room-right-button {
