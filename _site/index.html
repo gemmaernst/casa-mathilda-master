@@ -158,7 +158,7 @@
 
         <div id="popup-room-details-1" class="mfp-hide room-details-popup">
           <h2>  </h2>
-          This is a room details description
+          <p> This is a room details description </p>
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -182,7 +182,7 @@
 
         <div id="popup-room-details-2" class="mfp-hide room-details-popup">
           <h2> Title </h2>
-          This is a room details description
+          <p> This is a room details description </p>
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -203,7 +203,7 @@
 
         <div id="popup-room-details-3" class="mfp-hide room-details-popup">
           <h2>  </h2>
-          This is a room details description
+          <p> This is a room details description </p>
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -222,11 +222,11 @@
       <div class="col-6_xs-12 padded-8">
         <h1>info title</h1>
         <div class="bump-right p-bold">
-            info markdown
+            <p>Casa Mathilda es un Bed &amp; Breakfast Boutique situado en el barrio del Eixample de Barcelona, un vecindario elegante y a pocos metros de La Pedrera y de la Sagrada Familia. Ubicado en la planta principal de un edificio emblem&aacute;tico que perteneci&oacute; a una notable familia del textil catal&aacute;n de finales de siglo XIX. Fue totalmente rehabilitado en 2014 mezclando modernidad y un toque vintage y con acabados de primera calidad.</p><p>Cuidamos todos los detalles como lo har&iacute;a Mathilda, para que te sientas como en tu propia casa. En el desayuno ofrecemos productos frescos a diario, como el pan de la prestigiosa panader&iacute;a Baluard, fruta fresca, surtido de quesos, jamones y embutidos, yogures, cereales, tortilla y huevos, t&eacute;s, infusiones y ponemos a disposici&oacute;n una cafetera Nespresso para empezar el d&iacute;a con energ&iacute;a.</p><p>Adem&aacute;s, ofrecemos la opci&oacute;n de reserva completa de toda la casa para grupos y celebraciones. *sujeto a disponibilidad. Cons&uacute;ltanos tus inquietudes y necesidades a trave&eacute;s de nuestro e-mail o tel&eacute;fono.</p><p>Horario de recepci&oacute;n: 8.30h &ndash; 20.30h | Check-in: 15h Check-out: 12h</p>
         </div>
         <h2>Servicios</h2>
         <div class="bump-right padded-bottom">
-            services markdown
+            <ul><li>Servicio diario de habitaciones</li><li>WIFI gratuito en todo el establecimiento</li><li>Aire acondicionado / Calefacci&oacute;n en habitaciones y zonas comunes</li><li>C&aacute;maras de seguridad en zonas comunes</li><li>Habitaci&oacute;n adaptada y accesible a minusv&aacute;lidos</li><li>Cunas para beb&eacute;s bajo petici&oacute;n y gratuito para ni&ntilde;os de hasta 2 a&ntilde;os</li><li>Espacio sin humo, con detectores y rociadores anti-incendios</li><li>Servicio de guarda-maletas (horario de recepci&oacute;n)</li><li>Ventanas de m&aacute;ximo aislamiento del ruido exterior</li><li>Tel&eacute;fono en todas las habitaciones para llamadas nacionales y de emergencia</li><li>Alquiler de bicicletas</li></ul>
         </div>
 
       </div>
@@ -344,7 +344,7 @@
             <p class="bump-right p-bold">Teléfono: +34 935321600</p>
             <p class="bump-right p-bold">Email: info@casamathilda.com</p>
         </div>
-        Si tienes alguna duda, sugerencia o petición, por favor, no dudes en ponerte en contacto con nosotros. Estaremos encantados de saber de ti y de tener la oportunidad de ayudarte o de mejorar.
+        <p>Si tienes alguna duda, sugerencia o petición, por favor, no dudes en ponerte en contacto con nosotros. Estaremos encantados de saber de ti y de tener la oportunidad de ayudarte o de mejorar. </p>
         <form method="" action="">
           <!-- <label for="firstname" class="mob-show">Tu nombre</label> -->
           <input type="firstname" name="firstname" placeholder="Tu nombre" required>
@@ -362,11 +362,13 @@
           <p class="p-bold align-center"> Roger de Lluria, 125-127</p>
           <p class="p-bold align-center"> Barcelona</p>
 
-        Junto a la parada de metro Diagonal de las líneas L3 y L5, a 10 minutos a pie de las líneas L2 y L4. Autobuses cercanos: 6, 7, 16, 17, V17, 20, 22, 24, 33, 34, 39 y 45.
+        <p>Junto a la parada de metro Diagonal de las líneas L3 y L5, a 10 minutos a pie de las líneas L2 y L4. Autobuses cercanos: 6, 7, 16, 17, V17, 20, 22, 24, 33, 34, 39 y 45.</p>
       </div>
     </div>
   </section>
-  <div>
+
+  <!-- normally we wouldn't set a fixed height on a div, but since the only element inside the container already has a fixed height, this ensures there is no gap around the map -->
+  <div style="height:450px">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.9479093214813!2d2.161464915383106!3d41.39693760336602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a294be90cebf%3A0xe80d18c953205613!2sCasa+Mathilda+%7C+Barcelona!5e0!3m2!1sen!2sid!4v1532076689863" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 
@@ -395,12 +397,6 @@
 
     <!-- - - - - - - - - - - FOOTER - - - - - - - - - -  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-
-    <!-- this is for sumome popups -->
-
-    <script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='a8225edfb0f738452391a057432b6467927bf228fc706c792f4c668ccb450ab5';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
-
-    <!-- end sumome -->
 
     <!-- magnific popup lightbox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>

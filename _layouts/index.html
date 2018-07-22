@@ -43,7 +43,7 @@ intro-banner: true
 
         <div id="popup-room-details-1" class="mfp-hide room-details-popup">
           <h2> {{page.room-details-1-title}} </h2>
-          {{page.room-details-1_markdown}}
+          {{page.room-details-1_html}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -71,7 +71,7 @@ intro-banner: true
 
         <div id="popup-room-details-2" class="mfp-hide room-details-popup">
           <h2> {{page.room-details-2-title}} </h2>
-          {{page.room-details-2_markdown}}
+          {{page.room-details-2_html}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -96,7 +96,7 @@ intro-banner: true
 
         <div id="popup-room-details-3" class="mfp-hide room-details-popup">
           <h2> {{page.room-details-3-title}} </h2>
-          {{page.room-details-3_markdown}}
+          {{page.room-details-3_html}}
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
           <img src="/images/blog-photo.jpg" class="small-image">
@@ -115,11 +115,11 @@ intro-banner: true
       <div class="col-6_xs-12 padded-8">
         <h1>{{page.info-title}}</h1>
         <div class="bump-right p-bold">
-            {{page.info_markdown}}
+            {{page.info_html}}
         </div>
         <h2>{{page.services-title}}</h2>
         <div class="bump-right padded-bottom">
-            {{page.services_markdown}}
+            {{page.services_html}}
         </div>
 
       </div>
@@ -269,7 +269,7 @@ intro-banner: true
             <p class="bump-right p-bold">{{page.contact-phone}}</p>
             <p class="bump-right p-bold">{{page.contact-email}}</p>
         </div>
-        {{page.contact_markdown}}
+        {{page.contact_html }}
         <form method="" action="">
           <!-- <label for="firstname" class="mob-show">Tu nombre</label> -->
           <input type="firstname" name="firstname" placeholder="Tu nombre" required>
@@ -287,11 +287,13 @@ intro-banner: true
           <p class="p-bold align-center"> {{page.address}}</p>
           <p class="p-bold align-center"> {{page.city}}</p>
 
-        {{page.directions_markdown}}
+        {{page.directions_html}}
       </div>
     </div>
   </section>
-  <div>
+
+  <!-- normally we wouldn't set a fixed height on a div, but since the only element inside the container already has a fixed height, this ensures there is no gap around the map -->
+  <div style="height:450px">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.9479093214813!2d2.161464915383106!3d41.39693760336602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a294be90cebf%3A0xe80d18c953205613!2sCasa+Mathilda+%7C+Barcelona!5e0!3m2!1sen!2sid!4v1532076689863" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 

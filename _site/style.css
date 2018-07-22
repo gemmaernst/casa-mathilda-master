@@ -294,7 +294,8 @@ h2 {
   text-transform: uppercase;
 }
 
-.p-bold {
+.p-bold,
+.p-bold p {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   font-size: 1rem;
