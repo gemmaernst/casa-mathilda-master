@@ -130,6 +130,7 @@ footer {
   right: 0;
   top: 0;
   padding: 2% 2% 2% 2%;
+  z-index: 99;
 }
 
 .transbox {
@@ -209,6 +210,11 @@ footer {
 
 /* Popup Room Details */
 
+  /* this styles the active link for the room navigation */
+#rooms-filter .active {
+    border-bottom: 1px solid grey;
+}
+
 .room-details-popup {
   position: absolute;
   right: 0;
@@ -244,6 +250,41 @@ footer {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+
+.slider-rooms .bg-image-room {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.room-left-button,
+.room-right-button {
+  z-index:99;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: white;
+  max-width: 2rem;
+}
+
+.room-left-button {
+  left: 5%;
+  top:50%;
+  transform: rotateZ(180deg);
+}
+
+.room-right-button {
+  right: 3%;
+  top:50%;
+  z-index:99;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  color: white;
+  max-width: 2rem;
 }
 
 /* Launch popup */
@@ -488,9 +529,13 @@ footer nav a:hover, .copyright a:hover {
 }
 
 .button-1 img,
-.button-left img {
+.button-left img,
+.button-1 .arrow {
   width: 0.9em;
+  margin:0;
   margin-left: 1em;
+  display:inline-block;
+
 }
 
 .button-1:hover, .click-discover:hover, .book-button:hover {

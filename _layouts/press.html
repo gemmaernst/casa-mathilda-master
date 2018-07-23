@@ -19,7 +19,7 @@ layout: default
 
     <div class="col-4_sm-6_xs-12 padded-5">
       <img src="{{press.featured_image}}" alt="{{press.title}}">
-      <div class="align-center button-2"><a href="{{press.url}}" target="_blank">Ver</a></div>
+      <div class="align-center button-2"><a href="{{press.pdf_path}}" target="_blank">Ver</a></div>
     </div>
 
     {% endfor %}
@@ -30,8 +30,9 @@ layout: default
 
 <!-- - - - - - - - - - - Bottom Button - - - - - - - - - -  -->
   <div class="button-1 align-center">
-    <a href="#">Atrás</a>
+    <a href="#" onclick="goBack()">Atrás
     <img src="/images/right-arrow.svg" alt="right arrow">
+    </a>
   </div>
 
 </section>
