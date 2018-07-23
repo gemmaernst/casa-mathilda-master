@@ -120,7 +120,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(images/room-mathilda.jpg);
-  min-height: 80vh;
+  padding-bottom: 46%;
   position: relative;
 }
 
@@ -211,8 +211,14 @@ footer {
 /* Popup Room Details */
 
   /* this styles the active link for the room navigation */
+#rooms-filter a,
+#portfolio-filter a {
+  padding-bottom: 0;
+}
+
+#portfolio-filter .active,
 #rooms-filter .active {
-    border-bottom: 1px solid grey;
+  border-bottom: 2px solid #546461;
 }
 
 .room-details-popup {
@@ -226,6 +232,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   display:none;
+  z-index: 101;
 }
 
 .room-details-popup:focus {
@@ -253,6 +260,8 @@ footer {
 }
 
 .slider-rooms .bg-image-room {
+    background-size: cover;
+    background-position:center;
     position: absolute;
     top: 0;
     left: 0;
@@ -577,8 +586,11 @@ footer nav a:hover, .copyright a:hover {
 }
 
 .slider-rooms .button-1 {
-  top: 40vh;
-  /* left:40vw; */
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .book-button {
@@ -844,7 +856,7 @@ hr {
   display:none;
 }
 
-  header, section {
+  section {
     padding: 7px 0px 0px 100px;
 }
 
@@ -860,6 +872,19 @@ hr {
   footer {
     padding: 5% 0 5% 0px;
   }
+  .room-details-popup {
+    width:90%;
+    background: rgba(255,255,255,0.95);
+  }
+
+  .bg-image-slide .transbox {
+    top: 20vh;
+  }
+
+  .bg-image-slide .transbox h1 {
+    line-height:1;
+    font-size: 1.5rem;
+  }
 
 }/* this closes the media query  */
 
@@ -874,7 +899,7 @@ hr {
     display: none;
   }
 
-  header, section {
+  section {
     padding: 30px 5% 0 5%;
   }
 

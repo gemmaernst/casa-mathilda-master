@@ -32,19 +32,19 @@ layout: default
 
       {% if page.language == 'es' %}
       <nav id="rooms-filter">
-        <li><a href="#" id="terraza">Terraza</a> | </li>
+        <li><a class="active" href="#" id="terraza">Terraza</a> | </li>
         <li><a href="#" id="interiores">Interiores</a> | </li>
         <li><a href="#" id="a-la-calle">A la Calle</a></li>
       </nav>
       {% elsif page.language == 'en' %}
       <nav id="rooms-filter">
-        <li><a href="#" id="terraza">Terrace</a> | </li>
+        <li><a class="active" href="#" id="terraza">Terrace</a> | </li>
         <li><a href="#" id="interiores">Interiores</a> | </li>
         <li><a href="#" id="a-la-calle">A la Calle</a></li>
       </nav>
       {% elsif page.language == 'fr' %}
       <nav id="rooms-filter">
-        <li><a href="#" id="terraza">Terraza</a> | </li>
+        <li><a class="active" href="#" id="terraza">Terraza</a> | </li>
         <li><a href="#" id="interiores">Interiores</a> | </li>
         <li><a href="#" id="a-la-calle">A la Calle</a></li>
       </nav>
@@ -62,10 +62,10 @@ layout: default
       <div class="bg-image-room" style="background-image:url({{item.banner-2_image}})"></div>
       <div class="bg-image-room" style="background-image:url({{item.banner-3_image}})"></div>
 
-      <button class="room-left-button" onclick="plusRoomGallery(-1)">
+      <button class="room-left-button mob-hide" onclick="plusRoomGallery(-1)">
         <img src="/images/right-arrow.svg">
       </button>
-      <button class="room-right-button" onclick="plusRoomGallery(+1)">
+      <button class="room-right-button mob-hide" onclick="plusRoomGallery(+1)">
         <img src="/images/right-arrow.svg">
       </button>
     <!--this anchor link is the details button which when clicked opens up the popup div. The href corresponds to the id of the div we want to pop-up and the class 'open-room-details' is what initialises the popup in the javascript. The styles of the popup are controlled through the 'room-details-popup class'. -->
@@ -86,15 +86,18 @@ layout: default
 
       <div id="popup-room-details-{{item.number}}" class="room-details-popup">
         <div class="grid">
-          <div class="col-7">
+          <div class="col-7_sm-12">
                 <h2> {{item.room-details-title}} </h2>
                 <p> {{item.room-details-description}}</p>
-                <div class="button-left button-ochre left">
+                <div class="button-left button-ochre left mob-hide">
                     <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
                 </div>
           </div>
-          <div class="col-5">
+          <div class="col-5_sm-12">
             {{item.room-features_html}}
+            <div class="button-left button-ochre left mob-show">
+                <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
+            </div>
           </div>
           <span class="close-icon" id="hide-{{item.number}}"> X </span>
         </div>
