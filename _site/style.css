@@ -246,8 +246,7 @@ footer {
 
 
 .room-details-popup li {
-  padding-left: 3rem;
-  list-style-position: inside;
+  list-style-position: outside;
   padding-bottom: 0.5rem;
 }
 
@@ -257,6 +256,7 @@ footer {
   top: 0;
   right: 0;
   cursor: pointer;
+  width:76px;
 }
 
 .slider-rooms .bg-image-room {
@@ -389,9 +389,9 @@ h2 {
   position: fixed;
   left: 0;
   top: 20vh;
-  padding: 7% 1% 7% 1%;
+  padding: 7% 2% 7% 2%;
   background-color: #FFF;
-  width: 150px;
+  width: 140px;
   z-index: 100;
 }
 
@@ -878,11 +878,11 @@ hr {
   }
 
   .bg-image-slide .transbox {
-    top: 20vh;
+    top: 70vh;
   }
 
   .bg-image-slide .transbox h1 {
-    line-height:1;
+    line-height:1.5;
     font-size: 1.5rem;
   }
 
@@ -933,6 +933,9 @@ hr {
   .link-menu p {
     font-size: 0.6rem;
   }
+  .bg-image-slide .transbox {
+    top: 55vh;
+  }
 }
 
 /* this closes the media query  */
@@ -966,6 +969,10 @@ hr {
 
   .news .padded {
     padding: 0 5% 0 5%;
+  }
+
+  .bg-image-slide .transbox {
+    max-width: 80%;
   }
 
 }/* this closes the media query  */

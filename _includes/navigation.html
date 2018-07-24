@@ -37,17 +37,17 @@
     {% if page.language == 'en' %}
 
     <button class="dropbtn">
-      ENG <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+      ENG <img class="down-arrow" src="/images/down-arrow.svg" alt="down arrow">
     </button>
     <div class="dropdown-content">
       <a href="/" data-lang="es">ESP</a>
-      <a href="/fr/" data-lang="fr">FRE</a>
+      <a href="/fr/" data-lang="fr">FR</a>
     </div>
 
     {% elsif page.language == 'fr' %}
 
     <button class="dropbtn">
-      FRE <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+      FRE <img class="down-arrow" src="/images/down-arrow.svg" alt="down arrow">
     </button>
     <div class="dropdown-content">
       <a href="/en/" data-lang="en">ENG</a>
@@ -57,11 +57,11 @@
     {% else %} <!-- spanish -->
 
     <button class="dropbtn">
-      ESP <img class="down-arrow" src="/images/up-arrow.svg" alt="up arrow">
+      ESP <img class="down-arrow" src="/images/down-arrow.svg" alt="down arrow">
     </button>
     <div class="dropdown-content">
       <a href="/en/" data-lang="en">ENG</a>
-      <a href="/fr/" data-lang="fr">FRE</a>
+      <a href="/fr/" data-lang="fr">FR</a>
     </div>
 
     {% endif %}
@@ -99,7 +99,7 @@
         <li>
           <a href="#googtrans(es|es)" class="lang-es lang-select" data-lang="es">ESP</a>
           <a href="#googtrans(es|en)" class="lang-en lang-select" data-lang="en">EN</a>
-          <a href="#googtrans(es|fr)" class="lang-fr lang-select" data-lang="fr">FRE</a>
+          <a href="#googtrans(es|fr)" class="lang-fr lang-select" data-lang="fr">FR</a>
       </li>
       <ul>
   </div>

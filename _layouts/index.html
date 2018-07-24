@@ -52,7 +52,6 @@ layout: default
 
     </div>
     <!-- we need to create one of these for each of the room types -->
-    <!-- we need to create one of these for each of the room types -->
     <div id="rooms-grid">
 
     {% for item in page.room-details %}
@@ -86,20 +85,20 @@ layout: default
 
       <div id="popup-room-details-{{item.number}}" class="room-details-popup">
         <div class="grid">
-          <div class="col-7_sm-12">
+          <div class="col-5_sm-12">
                 <h2> {{item.room-details-title}} </h2>
                 <p> {{item.room-details-description}}</p>
                 <div class="button-left button-ochre left mob-hide">
                     <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
                 </div>
           </div>
-          <div class="col-5_sm-12">
+          <div class="col-7_sm-12 padded-left">
             {{item.room-features_html}}
             <div class="button-left button-ochre left mob-show">
                 <a href="#"> Book <img src="/images/right-arrow.svg" alt="right arrow"> </a>
             </div>
           </div>
-          <span class="close-icon" id="hide-{{item.number}}"> X </span>
+          <span class="close-icon" id="hide-{{item.number}}"><img src="/images/letter-x.svg"></span>
         </div>
       </div>
       <!-- end popup div -->
@@ -113,10 +112,10 @@ layout: default
 
   <!-- - - - - - - - - - - SECTION: INFO - - - - - - - - - -  -->
   <section class="bg-image bg-box">
-    <div class="grid-middle-spaceBetween bg-beige padded-8" id="info">
+    <div class="grid-middle-spaceBetween bg-beige" id="info">
       <div class="col-6_xs-12 padded-8">
         <h1>{{page.info-title}}</h1>
-        <div class="bump-right p-bold">
+        <div class="bump-right p-bold padded-bottom">
             {{page.info_html}}
         </div>
         <h2>{{page.services-title}}</h2>
@@ -198,7 +197,7 @@ layout: default
         <h1>Galería</h1>
         <p>Selecciona</p>
         <nav id="portfolio-filter">
-          <li><a href="" id="todas">Todas</a> | </li>
+          <li><a href="" class="active">Todas</a> | </li>
           <li><a href="" id="habitaciones">Habitaciones</a> | </li>
           <li><a href="" id="desayuno">Desayuno</a> | </li>
           <li><a href="" id="sala">Sala</a> | </li>
@@ -212,7 +211,7 @@ layout: default
         <h1>Galería</h1>
         <p>Selecciona</p>
         <nav id="portfolio-filter">
-          <li><a href="" id="todas">Todas</a> | </li>
+          <li><a href="" class="active">Todas</a> | </li>
           <li><a href="" id="habitaciones">Habitaciones</a> | </li>
           <li><a href="" id="desayuno">Desayuno</a> | </li>
           <li><a href="" id="sala">Sala</a> | </li>
@@ -226,7 +225,7 @@ layout: default
       <h1>Galería</h1>
       <p>Selecciona</p>
       <nav id="portfolio-filter">
-        <li><a href="" id="todas">Todas</a> | </li>
+        <li><a href="" class="active">Todas</a> | </li>
         <li><a href="" id="habitaciones">Habitaciones</a> | </li>
         <li><a href="" id="desayuno">Desayuno</a> | </li>
         <li><a href="" id="sala">Sala</a> | </li>
@@ -237,6 +236,8 @@ layout: default
 
       {% endif %}
 
+      <!-- - - - - - - - - - - grid - - - - - - - - - - -  -->
+
       <div class="grid gallery" id="portfolio-grid">
         {% for item in site.data.gallery %}
         <div class="col-4_sm-6_xs-12 filterable-item {{item.category}}" >
@@ -245,7 +246,6 @@ layout: default
         {% endfor %}
       </div>
     </div>
-    <!-- - - - - - - - - - - grid - - - - - - - - - - -  -->
 
   </section>
 
@@ -263,7 +263,7 @@ layout: default
       {% endif %}
 
       <div class="button-1 button-ochre button-insta">
-        <a href="http://instagram.com/casamathilda">Instagram <img src="/images/right-arrow.svg" alt="right arrow"></a>
+        <a href="http://instagram.com/casamathilda" target="_blank">Instagram <img src="/images/right-arrow.svg" alt="right arrow"></a>
 
       </div>
     </div>
@@ -274,7 +274,7 @@ layout: default
     </div>
 
     <!-- - - - - - - - - - - SECTION: CONTACT - - - - - - - - - -  -->
-    <div class="grid-middle-spaceBetween padded-8" id="contact">
+    <div class="grid-middle-spaceBetween" id="contact">
       <div class="col-6_xs-12 padded-8">
         <h1>{{page.contact-title}}</h1>
         <div>
