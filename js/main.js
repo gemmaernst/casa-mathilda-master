@@ -124,7 +124,7 @@ $('a[href*="#"]')
         lastDatePopupShowed = new Date(parseInt(localStorage.getItem('lastDatePopupShowed')));
       }
 
-      if (((now - lastDatePopupShowed) >= (15 * 86400000)) || !lastDatePopupShowed) {
+      if (((now - lastDatePopupShowed) >= (0.1 * 86400000)) || !lastDatePopupShowed) {
         $.magnificPopup.open({
           items: { src: '#launch-popup' },
           type: 'inline'

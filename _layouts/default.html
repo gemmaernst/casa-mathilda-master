@@ -15,12 +15,12 @@
       {% include navigation.html %}
       <!-- - - - - - - - - - - BOOK BUTTON - - - - - - - - - -  -->
       <a href="#">
-        {% if page.language == 'es' %}
-        <img src="/images/book-button.png" alt="book button" class="book-button">
-        {% elsif page.language == 'en' %}
-        <img src="/images/book-button.png" alt="book button" class="book-button">
+        {% if page.language == 'en' %}
+        <img src="/images/book-button-eng.png" alt="book button" class="book-button">
         {% elsif page.language == 'fr' %}
-        <img src="/images/book-button.png" alt="book button" class="book-button">
+        <img src="/images/book-button-fr.png" alt="book button" class="book-button">
+        {% else %}
+        <img src="/images/book-button-esp.png" alt="book button" class="book-button">
         {% endif %}
       </a>
 
@@ -70,6 +70,8 @@
           <p>Copyright © 2018 Casa Mathilda | <a href="http://loveiscreative.com">Site Credits</a></p>
         </div>
       </footer>
+
+      {% include pop-up.html %}
 
       {% include body-scripts.html %}
 
